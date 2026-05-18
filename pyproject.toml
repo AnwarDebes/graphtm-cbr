@@ -1,0 +1,48 @@
+[project]
+name = "graphtm-cbr"
+version = "0.2.0"
+description = "Hierarchical Graph Tsetlin Machine with Counterfactual Boolean Recourse: graph-native symbolic learner with topology-preserving message passing and counterfactual edge/node recourse."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = [
+    "Tsetlin Machine", "Hierarchical Tsetlin Machine",
+    "interpretable machine learning", "counterfactual explanations",
+    "knowledge distillation", "graph neural networks",
+    "molecular property prediction", "neuro-symbolic",
+]
+dependencies = [
+    "numpy>=1.24",
+    "numba>=0.59",
+    "torch>=2.6",
+    "torch-geometric>=2.7",
+    "scikit-learn>=1.5",
+    "rdkit>=2024.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Source = "https://github.com/<your-org>/graphtm-cbr"
+Citation = "./CITATION.cff"
+
+# Install instructions:
+#   pip install -e .              # classic
+#   uv pip install -e .           # ~10-100x faster (recommended)
+#   uv pip sync requirements.txt  # exact-pinned reproduction
+#
+# For the GPU build of PyTorch:
+#   uv pip install -e . --index-url https://download.pytorch.org/whl/cu126
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["graphtm*"]
+exclude = ["tests*", "experiments*", "vendors*", "results*", "paper*", "research*", "docs*", "benchmarks*", "scripts*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

@@ -1,0 +1,27 @@
+2026-05-16 02:05:25,258 Loading test set...
+2026-05-16 02:05:25,380 Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-05-16 02:05:25,380 Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-05-16 02:05:25,380 NumExpr defaulting to 8 threads.
+2026-05-16 02:05:31,527 test encoded=729
+2026-05-16 02:06:03,522 Ensemble members loaded: 5
+2026-05-16 02:06:03,522 Ensemble test scores...
+2026-05-16 02:06:34,923 ENSEMBLE TEST acc=0.575 auroc=0.669
+2026-05-16 02:06:34,924 Running ensemble recourse on 200 predicted-positives (capped 200)...
+2026-05-16 02:08:39,294   25/200, success=14
+2026-05-16 02:12:23,240   75/200, success=43
+2026-05-16 02:16:07,800   125/200, success=68
+2026-05-16 02:20:20,339   175/200, success=94
+2026-05-16 02:22:17,979 ENSEMBLE RECOURSE: success=109/200 (0.545)
+2026-05-16 02:22:17,980   mean_flips=1.51 median=1 p95=3
+2026-05-16 02:22:17,981   latency_ms p50=3692 p95=8522 p99=12687
+2026-05-16 02:22:17,981   ('remove_bond', 0, 1) -> 9
+2026-05-16 02:22:17,981   ('swap_atom', 0) -> 9
+2026-05-16 02:22:17,981   ('remove_bond', 4, 5) -> 8
+2026-05-16 02:22:17,981   ('remove_bond', 3, 4) -> 6
+2026-05-16 02:22:17,981   ('remove_bond', 8, 9) -> 6
+2026-05-16 02:22:17,981   ('swap_atom', 12) -> 5
+2026-05-16 02:22:17,981   ('remove_bond', 1, 2) -> 5
+2026-05-16 02:22:17,981   ('swap_atom', 11) -> 4
+2026-05-16 02:22:17,981   ('remove_bond', 6, 7) -> 4
+2026-05-16 02:22:17,981   ('remove_bond', 9, 10) -> 4
+2026-05-16 02:22:17,982 Wrote /home/anward/project/graphtm-cbr/results/eval_recourse_ensemble_1778898137.json

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+<title>D3 Interactive Clause Tree</title>
+<style>
+    body {
+        font-family: "Segoe UI", sans-serif;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .node circle {
+        cursor: pointer;
+        stroke-width: 2px;
+    }
+
+    .node text {
+        font-size: 12px;
+        pointer-events: none;
+    }
+
+    .link {
+        fill: none;
+        stroke: #aaa;
+        stroke-width: 1.5px;
+    }
+
+    .highlight circle {
+        stroke: #ff0000 !important;
+        stroke-width: 4px !important;
+    }
+
+    .tooltip {
+        position: absolute;
+        padding: 6px 10px;
+        background: rgba(0,0,0,0.7);
+        color: white;
+        border-radius: 5px;
+        font-size: 12px;
+        pointer-events: none;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div id="tooltip" class="tooltip"></div>
+
+<svg id="svg"></svg>
+
+https://d3js.org/d3.v7.min.js
+<script>
+
+// ---------------------------------------------------------------------
+// 1. Load JSON and convert to D3 hierarchical structure
+// ---------------------------------------------------------------------
+
+function isLeaf(node) {
+    return Array.isArray(node.children) && node.children.length > 0 && Array.isArray(node.children[0]);
+}
+
+function convert(node) {
+    if (isLeaf(node)) {
+        return {
+            name: "LEAF",
+            type: "LEAF",
+            children: node.children.map(arr => ({
+                name: arr.join(" ∧ "),
+                type: "CLAUSE",
+                children: []
+            }))
+        };
+    }
+
+    return {
+        name: node.type,
+        type: node.type,
+        children: node.children.map(c => convert(c))
+    };
+}
+
+function buildForest(json) {
+    const roots = [];
+    Object.entries(json).forEach(([className, cls]) => {
+        Object.entries(cls).forEach(([key, item]) => {
+            const root = convert(item);
+            root.name = `${className} #${key}`;
+            root.type = "ROOT";
+            roots.push(root);
+        });
+    });
+    return roots;
+}
+
+// ---------------------------------------------------------------------
+// 2. Color coding by node type
+// ---------------------------------------------------------------------
+
+const colorMap = {
+    "ROOT": "#1f77b4",
+    "AND": "#2ca02c",
+    "OR": "#ff7f0e",
+    "LEAF": "#9467bd",
+    "CLAUSE": "#8c564b"
+};
+
+// ---------------------------------------------------------------------
+// 3. D3 Rendering
+// ---------------------------------------------------------------------
+
+fetch("parityclauses_1000.json")
+    .then(r => r.json())
+    .then(jsonData => {
+
+        const forest = buildForest(jsonData);
+
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        const svg = d3.select("#svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        const g = svg.append("g").attr("transform", "translate(40,40)");
+
+        const treeLayout = d3.tree().size([height - 80, width - 200]);
+
+        const tooltip = d3.select("#tooltip");
+
+        let selected = null;
+
+        forest.forEach((rootData, idx) => {
+            const root = d3.hierarchy(rootData);
+            root.x0 = 0;
+            root.y0 = idx * 200;
+
+            collapseAll(root);
+            update(root);
+
+            function collapseAll(node) {
+                if (node.children) {
+                    node._children = node.children;
+                    node._children.forEach(collapseAll);
+                    node.children = null;
+                }
+            }
+
+            function update(source) {
+                const tree = treeLayout(root);
+
+                const nodes = tree.descendants();
+                const links = tree.links();
+
+                // ---------------------------
+                // NODE JOIN
+                // ---------------------------
+                const node = g.selectAll("g.node" + idx)
+                    .data(nodes, d => d.id || (d.id = Math.random()));
+
+                // ENTER
+                const nodeEnter = node.enter().append("g")
+                    .attr("class", "node" + idx)
+                    .attr("transform", d => `translate(${source.y0},${source.x0})`)
+                    .on("click", (event, d) => {
+                        if (selected) selected.classed("highlight", false);
+                        selected = d3.select(event.currentTarget).classed("highlight", true);
+
+                        if (d.children) {
+                            d._children = d.children;
+                            d.children = null;
+                        } else if (d._children) {
+                            d.children = d._children;
+                            d._children = null;
+                        }
+                        update(d);
+                    })
+                    .on("mouseover", (event, d) => {
+                        tooltip.style("display", "block")
+                               .html(`<strong>${d.data.name}</strong>`);
+                    })
+                    .on("mousemove", (event) => {
+                        tooltip.style("left", (event.pageX + 10) + "px")
+                               .style("top", (event.pageY + 10) + "px");
+                    })
+                    .on("mouseout", () => {
+                        tooltip.style("display", "none");
+                    });
+
+                nodeEnter.append("circle")
+                    .attr("r", 1e-6)
+                    .attr("fill", d => colorMap[d.data.type] || "#999")
+                    .attr("stroke", "#333");
+
+                nodeEnter.append("text")
+                    .attr("dy", "0.32em")
+                    .attr("x", 12)
+                    .text(d => d.data.name);
+
+                // UPDATE
+                const nodeUpdate = nodeEnter.merge(node);
+                nodeUpdate.transition()
+                    .duration(300)
+                    .attr("transform", d => `translate(${d.y},${d.x})`);
+
+                nodeUpdate.select("circle")
+                    .attr("r", 8);
+
+                // EXIT
+                const nodeExit = node.exit().transition()
+                    .duration(300)
+                    .attr("transform", d => `translate(${source.y},${source.x})`)
+                    .remove();
+
+                nodeExit.select("circle").attr("r", 1e-6);
+
+                // ---------------------------
+                // LINK JOIN
+                // ---------------------------
+                const link = g.selectAll("path.link" + idx)
+                    .data(links, d => d.target.id);
+
+                // ENTER
+                const linkEnter = link.enter().insert("path", "g")
+                    .attr("class", "link" + idx + " link")
+                    .attr("d", d => `
+                        M ${source.y0},${source.x0}
+                        C ${(source.y0 + d.source.y) / 2},${source.x0}
+                          ${(source.y0 + d.source.y) / 2},${d.source.x}
+                          ${d.source.y},${d.source.x}
+                    `);
+
+                // UPDATE
+                linkEnter.merge(link).transition()
+                    .duration(300)
+                    .attr("d", d => `
+                        M ${d.source.y},${d.source.x}
+                        C ${(d.source.y + d.target.y) / 2},${d.source.x}
+                          ${(d.source.y + d.target.y) / 2},${d.target.x}
+                          ${d.target.y},${d.target.x}
+                    `);
+
+                // EXIT
+                link.exit().transition()
+                    .duration(300)
+                    .attr("d", d => `
+                        M ${source.y},${source.x}
+                        C ${(source.y + d.source.y) / 2},${source.x}
+                          ${(source.y + d.source.y) / 2},${d.source.x}
+                          ${d.source.y},${d.source.x}
+                    `)
+                    .remove();
+
+                nodes.forEach(d => {
+                    d.x0 = d.x;
+                    d.y0 = d.y;
+                });
+            }
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

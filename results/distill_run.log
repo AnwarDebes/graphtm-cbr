@@ -1,0 +1,329 @@
+2026-05-16 02:24:49,318 === Phase 2: GIN→HGTM distillation on TDC AMES ===
+Found local copy...
+Loading...
+Done!
+2026-05-16 02:24:52,996 n_mols=7278 splits tr=5822 va=727 te=729
+2026-05-16 02:24:52,996 Encoding...
+2026-05-16 02:25:08,870 encoded=7278 (15.9s)
+2026-05-16 02:25:08,874 tr=5822 va=727 te=729
+2026-05-16 02:25:08,874 Training GIN teacher (80 epochs, lr=1e-3)...
+2026-05-16 02:26:26,438 GIN teacher: val_auroc=0.885 train_wall=77.6s
+2026-05-16 02:26:26,600 GIN TEST: acc=0.730 auroc=0.796
+2026-05-16 02:26:26,600 Training K=5 HGTM ensemble on teacher hard labels...
+2026-05-16 02:26:26,600 --- Distilled member 1 / 5 (seed=42) ---
+2026-05-16 02:27:20,542   seed=42 ep= 1 val_auroc=0.580 wall=53.9s
+2026-05-16 02:28:09,860   seed=42 ep= 2 val_auroc=0.609 wall=49.3s
+2026-05-16 02:29:01,731   seed=42 ep= 3 val_auroc=0.596 wall=51.9s
+2026-05-16 02:29:50,123   seed=42 ep= 4 val_auroc=0.624 wall=48.4s
+2026-05-16 02:30:38,623   seed=42 ep= 5 val_auroc=0.686 wall=48.5s
+2026-05-16 02:31:27,328   seed=42 ep= 6 val_auroc=0.601 wall=48.7s
+2026-05-16 02:32:15,232   seed=42 ep= 7 val_auroc=0.682 wall=47.9s
+2026-05-16 02:33:03,316   seed=42 ep= 8 val_auroc=0.645 wall=48.1s
+2026-05-16 02:33:51,083   seed=42 ep= 9 val_auroc=0.674 wall=47.8s
+2026-05-16 02:34:39,129   seed=42 ep=10 val_auroc=0.681 wall=48.0s
+2026-05-16 02:35:27,895   seed=42 ep=11 val_auroc=0.606 wall=48.8s
+2026-05-16 02:36:16,245   seed=42 ep=12 val_auroc=0.635 wall=48.3s
+2026-05-16 02:37:04,675   seed=42 ep=13 val_auroc=0.677 wall=48.4s
+2026-05-16 02:37:53,495   seed=42 ep=14 val_auroc=0.672 wall=48.8s
+2026-05-16 02:38:44,495   seed=42 ep=15 val_auroc=0.576 wall=51.0s
+2026-05-16 02:39:32,871   seed=42 ep=16 val_auroc=0.574 wall=48.4s
+2026-05-16 02:40:22,214   seed=42 ep=17 val_auroc=0.552 wall=49.3s
+2026-05-16 02:41:10,659   seed=42 ep=18 val_auroc=0.677 wall=48.4s
+2026-05-16 02:41:59,077   seed=42 ep=19 val_auroc=0.667 wall=48.4s
+2026-05-16 02:42:48,569   seed=42 ep=20 val_auroc=0.662 wall=49.5s
+2026-05-16 02:43:38,008   seed=42 ep=21 val_auroc=0.541 wall=49.4s
+2026-05-16 02:44:27,055   seed=42 ep=22 val_auroc=0.616 wall=49.0s
+2026-05-16 02:45:16,645   seed=42 ep=23 val_auroc=0.604 wall=49.6s
+2026-05-16 02:46:06,640   seed=42 ep=24 val_auroc=0.638 wall=50.0s
+2026-05-16 02:46:55,405   seed=42 ep=25 val_auroc=0.548 wall=48.8s
+2026-05-16 02:47:43,667   seed=42 ep=26 val_auroc=0.639 wall=48.3s
+2026-05-16 02:48:32,570   seed=42 ep=27 val_auroc=0.663 wall=48.9s
+2026-05-16 02:49:20,690   seed=42 ep=28 val_auroc=0.610 wall=48.1s
+2026-05-16 02:50:09,215   seed=42 ep=29 val_auroc=0.629 wall=48.5s
+2026-05-16 02:50:58,249   seed=42 ep=30 val_auroc=0.622 wall=49.0s
+2026-05-16 02:51:47,854   seed=42 ep=31 val_auroc=0.645 wall=49.6s
+2026-05-16 02:52:37,687   seed=42 ep=32 val_auroc=0.642 wall=49.8s
+2026-05-16 02:53:27,196   seed=42 ep=33 val_auroc=0.658 wall=49.5s
+2026-05-16 02:54:16,888   seed=42 ep=34 val_auroc=0.664 wall=49.7s
+2026-05-16 02:55:04,782   seed=42 ep=35 val_auroc=0.604 wall=47.9s
+2026-05-16 02:55:53,508   seed=42 ep=36 val_auroc=0.636 wall=48.7s
+2026-05-16 02:56:42,209   seed=42 ep=37 val_auroc=0.608 wall=48.7s
+2026-05-16 02:57:31,181   seed=42 ep=38 val_auroc=0.543 wall=49.0s
+2026-05-16 02:58:21,662   seed=42 ep=39 val_auroc=0.620 wall=50.5s
+2026-05-16 02:59:11,425   seed=42 ep=40 val_auroc=0.549 wall=49.8s
+2026-05-16 03:00:00,555   seed=42 ep=41 val_auroc=0.651 wall=49.1s
+2026-05-16 03:00:49,868   seed=42 ep=42 val_auroc=0.637 wall=49.3s
+2026-05-16 03:01:38,800   seed=42 ep=43 val_auroc=0.547 wall=48.9s
+2026-05-16 03:02:27,726   seed=42 ep=44 val_auroc=0.668 wall=48.9s
+2026-05-16 03:03:17,634   seed=42 ep=45 val_auroc=0.639 wall=49.9s
+2026-05-16 03:04:05,830   seed=42 ep=46 val_auroc=0.546 wall=48.2s
+2026-05-16 03:04:55,451   seed=42 ep=47 val_auroc=0.613 wall=49.6s
+2026-05-16 03:05:43,872   seed=42 ep=48 val_auroc=0.623 wall=48.4s
+2026-05-16 03:06:33,118   seed=42 ep=49 val_auroc=0.605 wall=49.2s
+2026-05-16 03:07:21,806   seed=42 ep=50 val_auroc=0.613 wall=48.7s
+2026-05-16 03:08:10,875   seed=42 ep=51 val_auroc=0.541 wall=49.1s
+2026-05-16 03:09:00,207   seed=42 ep=52 val_auroc=0.624 wall=49.3s
+2026-05-16 03:09:49,171   seed=42 ep=53 val_auroc=0.655 wall=49.0s
+2026-05-16 03:10:38,549   seed=42 ep=54 val_auroc=0.617 wall=49.4s
+2026-05-16 03:11:26,934   seed=42 ep=55 val_auroc=0.618 wall=48.4s
+2026-05-16 03:12:15,173   seed=42 ep=56 val_auroc=0.550 wall=48.2s
+2026-05-16 03:13:04,059   seed=42 ep=57 val_auroc=0.647 wall=48.9s
+2026-05-16 03:13:53,357   seed=42 ep=58 val_auroc=0.635 wall=49.3s
+2026-05-16 03:14:41,062   seed=42 ep=59 val_auroc=0.608 wall=47.7s
+2026-05-16 03:15:30,411   seed=42 ep=60 val_auroc=0.623 wall=49.3s
+2026-05-16 03:15:30,412   seed=42 best ep=5 val_auroc=0.686
+2026-05-16 03:15:35,747   seed=42 TEST acc=0.579 auroc=0.679
+2026-05-16 03:15:35,753 --- Distilled member 2 / 5 (seed=43) ---
+2026-05-16 03:16:29,971   seed=43 ep= 1 val_auroc=0.578 wall=54.2s
+2026-05-16 03:17:18,752   seed=43 ep= 2 val_auroc=0.619 wall=48.8s
+2026-05-16 03:18:07,308   seed=43 ep= 3 val_auroc=0.623 wall=48.6s
+2026-05-16 03:18:55,599   seed=43 ep= 4 val_auroc=0.590 wall=48.3s
+2026-05-16 03:19:44,440   seed=43 ep= 5 val_auroc=0.677 wall=48.8s
+2026-05-16 03:20:32,659   seed=43 ep= 6 val_auroc=0.596 wall=48.2s
+2026-05-16 03:21:20,435   seed=43 ep= 7 val_auroc=0.688 wall=47.8s
+2026-05-16 03:22:09,149   seed=43 ep= 8 val_auroc=0.649 wall=48.7s
+2026-05-16 03:22:57,788   seed=43 ep= 9 val_auroc=0.532 wall=48.6s
+2026-05-16 03:23:46,219   seed=43 ep=10 val_auroc=0.641 wall=48.4s
+2026-05-16 03:24:34,946   seed=43 ep=11 val_auroc=0.684 wall=48.7s
+2026-05-16 03:25:24,943   seed=43 ep=12 val_auroc=0.637 wall=50.0s
+2026-05-16 03:26:13,592   seed=43 ep=13 val_auroc=0.584 wall=48.6s
+2026-05-16 03:27:02,423   seed=43 ep=14 val_auroc=0.677 wall=48.8s
+2026-05-16 03:27:50,832   seed=43 ep=15 val_auroc=0.623 wall=48.4s
+2026-05-16 03:28:38,973   seed=43 ep=16 val_auroc=0.549 wall=48.1s
+2026-05-16 03:29:26,923   seed=43 ep=17 val_auroc=0.548 wall=47.9s
+2026-05-16 03:30:15,249   seed=43 ep=18 val_auroc=0.659 wall=48.3s
+2026-05-16 03:31:03,293   seed=43 ep=19 val_auroc=0.580 wall=48.0s
+2026-05-16 03:31:51,834   seed=43 ep=20 val_auroc=0.652 wall=48.5s
+2026-05-16 03:32:39,917   seed=43 ep=21 val_auroc=0.662 wall=48.1s
+2026-05-16 03:33:29,047   seed=43 ep=22 val_auroc=0.623 wall=49.1s
+2026-05-16 03:34:17,966   seed=43 ep=23 val_auroc=0.659 wall=48.9s
+2026-05-16 03:35:06,909   seed=43 ep=24 val_auroc=0.548 wall=48.9s
+2026-05-16 03:35:55,514   seed=43 ep=25 val_auroc=0.548 wall=48.6s
+2026-05-16 03:36:44,551   seed=43 ep=26 val_auroc=0.648 wall=49.0s
+2026-05-16 03:37:33,438   seed=43 ep=27 val_auroc=0.542 wall=48.9s
+2026-05-16 03:38:21,764   seed=43 ep=28 val_auroc=0.652 wall=48.3s
+2026-05-16 03:39:11,075   seed=43 ep=29 val_auroc=0.637 wall=49.3s
+2026-05-16 03:39:59,793   seed=43 ep=30 val_auroc=0.619 wall=48.7s
+2026-05-16 03:40:48,028   seed=43 ep=31 val_auroc=0.666 wall=48.2s
+2026-05-16 03:41:38,521   seed=43 ep=32 val_auroc=0.629 wall=50.5s
+2026-05-16 03:42:26,937   seed=43 ep=33 val_auroc=0.611 wall=48.4s
+2026-05-16 03:43:15,446   seed=43 ep=34 val_auroc=0.630 wall=48.5s
+2026-05-16 03:44:04,192   seed=43 ep=35 val_auroc=0.638 wall=48.7s
+2026-05-16 03:44:52,343   seed=43 ep=36 val_auroc=0.568 wall=48.2s
+2026-05-16 03:45:41,136   seed=43 ep=37 val_auroc=0.644 wall=48.8s
+2026-05-16 03:46:30,655   seed=43 ep=38 val_auroc=0.546 wall=49.5s
+2026-05-16 03:47:20,149   seed=43 ep=39 val_auroc=0.661 wall=49.5s
+2026-05-16 03:48:10,099   seed=43 ep=40 val_auroc=0.594 wall=49.9s
+2026-05-16 03:48:58,136   seed=43 ep=41 val_auroc=0.629 wall=48.0s
+2026-05-16 03:49:46,710   seed=43 ep=42 val_auroc=0.644 wall=48.6s
+2026-05-16 03:50:37,709   seed=43 ep=43 val_auroc=0.666 wall=51.0s
+2026-05-16 03:51:25,936   seed=43 ep=44 val_auroc=0.648 wall=48.2s
+2026-05-16 03:52:14,269   seed=43 ep=45 val_auroc=0.615 wall=48.3s
+2026-05-16 03:53:02,222   seed=43 ep=46 val_auroc=0.568 wall=48.0s
+2026-05-16 03:53:50,890   seed=43 ep=47 val_auroc=0.612 wall=48.7s
+2026-05-16 03:54:39,173   seed=43 ep=48 val_auroc=0.611 wall=48.3s
+2026-05-16 03:55:27,519   seed=43 ep=49 val_auroc=0.586 wall=48.3s
+2026-05-16 03:56:16,548   seed=43 ep=50 val_auroc=0.539 wall=49.0s
+2026-05-16 03:57:05,398   seed=43 ep=51 val_auroc=0.557 wall=48.8s
+2026-05-16 03:57:53,461   seed=43 ep=52 val_auroc=0.658 wall=48.1s
+2026-05-16 03:58:41,391   seed=43 ep=53 val_auroc=0.618 wall=47.9s
+2026-05-16 03:59:29,398   seed=43 ep=54 val_auroc=0.652 wall=48.0s
+2026-05-16 04:00:18,828   seed=43 ep=55 val_auroc=0.642 wall=49.4s
+2026-05-16 04:01:07,663   seed=43 ep=56 val_auroc=0.662 wall=48.8s
+2026-05-16 04:01:55,411   seed=43 ep=57 val_auroc=0.660 wall=47.7s
+2026-05-16 04:02:43,440   seed=43 ep=58 val_auroc=0.538 wall=48.0s
+2026-05-16 04:03:32,534   seed=43 ep=59 val_auroc=0.547 wall=49.1s
+2026-05-16 04:04:21,339   seed=43 ep=60 val_auroc=0.647 wall=48.8s
+2026-05-16 04:04:21,339   seed=43 best ep=7 val_auroc=0.688
+2026-05-16 04:04:26,766   seed=43 TEST acc=0.597 auroc=0.681
+2026-05-16 04:04:26,772 --- Distilled member 3 / 5 (seed=44) ---
+2026-05-16 04:05:20,807   seed=44 ep= 1 val_auroc=0.504 wall=54.0s
+2026-05-16 04:06:10,698   seed=44 ep= 2 val_auroc=0.572 wall=49.9s
+2026-05-16 04:06:59,268   seed=44 ep= 3 val_auroc=0.545 wall=48.6s
+2026-05-16 04:07:48,517   seed=44 ep= 4 val_auroc=0.639 wall=49.2s
+2026-05-16 04:08:39,080   seed=44 ep= 5 val_auroc=0.586 wall=50.6s
+2026-05-16 04:09:28,002   seed=44 ep= 6 val_auroc=0.558 wall=48.9s
+2026-05-16 04:10:17,149   seed=44 ep= 7 val_auroc=0.632 wall=49.1s
+2026-05-16 04:11:04,770   seed=44 ep= 8 val_auroc=0.580 wall=47.6s
+2026-05-16 04:11:55,203   seed=44 ep= 9 val_auroc=0.596 wall=50.4s
+2026-05-16 04:12:50,814   seed=44 ep=10 val_auroc=0.626 wall=55.6s
+2026-05-16 04:13:48,814   seed=44 ep=11 val_auroc=0.588 wall=58.0s
+2026-05-16 04:14:42,437   seed=44 ep=12 val_auroc=0.649 wall=53.6s
+2026-05-16 04:15:31,273   seed=44 ep=13 val_auroc=0.540 wall=48.8s
+2026-05-16 04:16:19,977   seed=44 ep=14 val_auroc=0.613 wall=48.7s
+2026-05-16 04:17:08,005   seed=44 ep=15 val_auroc=0.629 wall=48.0s
+2026-05-16 04:17:56,721   seed=44 ep=16 val_auroc=0.549 wall=48.7s
+2026-05-16 04:18:45,685   seed=44 ep=17 val_auroc=0.542 wall=49.0s
+2026-05-16 04:19:35,344   seed=44 ep=18 val_auroc=0.551 wall=49.7s
+2026-05-16 04:20:25,537   seed=44 ep=19 val_auroc=0.609 wall=50.2s
+2026-05-16 04:21:14,162   seed=44 ep=20 val_auroc=0.608 wall=48.6s
+2026-05-16 04:22:03,044   seed=44 ep=21 val_auroc=0.609 wall=48.9s
+2026-05-16 04:22:51,895   seed=44 ep=22 val_auroc=0.643 wall=48.9s
+2026-05-16 04:23:40,593   seed=44 ep=23 val_auroc=0.625 wall=48.7s
+2026-05-16 04:24:29,365   seed=44 ep=24 val_auroc=0.607 wall=48.8s
+2026-05-16 04:25:17,643   seed=44 ep=25 val_auroc=0.549 wall=48.3s
+2026-05-16 04:26:06,381   seed=44 ep=26 val_auroc=0.634 wall=48.7s
+2026-05-16 04:26:55,178   seed=44 ep=27 val_auroc=0.637 wall=48.8s
+2026-05-16 04:27:44,014   seed=44 ep=28 val_auroc=0.549 wall=48.8s
+2026-05-16 04:28:34,503   seed=44 ep=29 val_auroc=0.603 wall=50.5s
+2026-05-16 04:29:23,930   seed=44 ep=30 val_auroc=0.599 wall=49.4s
+2026-05-16 04:30:12,043   seed=44 ep=31 val_auroc=0.606 wall=48.1s
+2026-05-16 04:31:01,506   seed=44 ep=32 val_auroc=0.619 wall=49.5s
+2026-05-16 04:31:50,209   seed=44 ep=33 val_auroc=0.612 wall=48.7s
+2026-05-16 04:32:39,072   seed=44 ep=34 val_auroc=0.654 wall=48.9s
+2026-05-16 04:33:29,353   seed=44 ep=35 val_auroc=0.576 wall=50.3s
+2026-05-16 04:34:17,708   seed=44 ep=36 val_auroc=0.663 wall=48.4s
+2026-05-16 04:35:07,117   seed=44 ep=37 val_auroc=0.597 wall=49.4s
+2026-05-16 04:35:56,902   seed=44 ep=38 val_auroc=0.536 wall=49.8s
+2026-05-16 04:36:45,439   seed=44 ep=39 val_auroc=0.542 wall=48.5s
+2026-05-16 04:37:34,094   seed=44 ep=40 val_auroc=0.560 wall=48.7s
+2026-05-16 04:38:23,294   seed=44 ep=41 val_auroc=0.654 wall=49.2s
+2026-05-16 04:39:11,592   seed=44 ep=42 val_auroc=0.618 wall=48.3s
+2026-05-16 04:40:01,262   seed=44 ep=43 val_auroc=0.614 wall=49.7s
+2026-05-16 04:40:50,622   seed=44 ep=44 val_auroc=0.647 wall=49.4s
+2026-05-16 04:41:39,008   seed=44 ep=45 val_auroc=0.648 wall=48.4s
+2026-05-16 04:42:27,058   seed=44 ep=46 val_auroc=0.646 wall=48.0s
+2026-05-16 04:43:15,620   seed=44 ep=47 val_auroc=0.668 wall=48.6s
+2026-05-16 04:44:04,321   seed=44 ep=48 val_auroc=0.645 wall=48.7s
+2026-05-16 04:44:54,184   seed=44 ep=49 val_auroc=0.551 wall=49.9s
+2026-05-16 04:45:44,293   seed=44 ep=50 val_auroc=0.643 wall=50.1s
+2026-05-16 04:46:32,276   seed=44 ep=51 val_auroc=0.638 wall=48.0s
+2026-05-16 04:47:22,677   seed=44 ep=52 val_auroc=0.607 wall=50.4s
+2026-05-16 04:48:12,761   seed=44 ep=53 val_auroc=0.601 wall=50.1s
+2026-05-16 04:49:01,033   seed=44 ep=54 val_auroc=0.548 wall=48.3s
+2026-05-16 04:49:49,890   seed=44 ep=55 val_auroc=0.626 wall=48.9s
+2026-05-16 04:50:48,009   seed=44 ep=56 val_auroc=0.663 wall=58.1s
+2026-05-16 04:51:46,223   seed=44 ep=57 val_auroc=0.615 wall=58.2s
+2026-05-16 04:52:43,645   seed=44 ep=58 val_auroc=0.610 wall=57.4s
+2026-05-16 04:53:41,143   seed=44 ep=59 val_auroc=0.649 wall=57.5s
+2026-05-16 04:54:38,098   seed=44 ep=60 val_auroc=0.564 wall=57.0s
+2026-05-16 04:54:38,098   seed=44 best ep=47 val_auroc=0.668
+2026-05-16 04:54:44,548   seed=44 TEST acc=0.628 auroc=0.666
+2026-05-16 04:54:44,552 --- Distilled member 4 / 5 (seed=45) ---
+2026-05-16 04:55:43,087   seed=45 ep= 1 val_auroc=0.598 wall=58.5s
+2026-05-16 04:56:31,742   seed=45 ep= 2 val_auroc=0.646 wall=48.7s
+2026-05-16 04:57:20,520   seed=45 ep= 3 val_auroc=0.622 wall=48.8s
+2026-05-16 04:58:08,792   seed=45 ep= 4 val_auroc=0.683 wall=48.3s
+2026-05-16 04:58:56,862   seed=45 ep= 5 val_auroc=0.640 wall=48.1s
+2026-05-16 04:59:44,816   seed=45 ep= 6 val_auroc=0.593 wall=48.0s
+2026-05-16 05:00:33,923   seed=45 ep= 7 val_auroc=0.560 wall=49.1s
+2026-05-16 05:01:24,878   seed=45 ep= 8 val_auroc=0.598 wall=51.0s
+2026-05-16 05:02:14,946   seed=45 ep= 9 val_auroc=0.655 wall=50.1s
+2026-05-16 05:03:04,615   seed=45 ep=10 val_auroc=0.621 wall=49.7s
+2026-05-16 05:03:52,651   seed=45 ep=11 val_auroc=0.628 wall=48.0s
+2026-05-16 05:04:41,774   seed=45 ep=12 val_auroc=0.659 wall=49.1s
+2026-05-16 05:05:30,269   seed=45 ep=13 val_auroc=0.624 wall=48.5s
+2026-05-16 05:06:19,363   seed=45 ep=14 val_auroc=0.668 wall=49.1s
+2026-05-16 05:07:07,303   seed=45 ep=15 val_auroc=0.625 wall=47.9s
+2026-05-16 05:07:57,042   seed=45 ep=16 val_auroc=0.611 wall=49.7s
+2026-05-16 05:08:54,006   seed=45 ep=17 val_auroc=0.609 wall=57.0s
+2026-05-16 05:09:42,569   seed=45 ep=18 val_auroc=0.594 wall=48.6s
+2026-05-16 05:10:30,811   seed=45 ep=19 val_auroc=0.607 wall=48.2s
+2026-05-16 05:11:19,302   seed=45 ep=20 val_auroc=0.552 wall=48.5s
+2026-05-16 05:12:07,599   seed=45 ep=21 val_auroc=0.549 wall=48.3s
+2026-05-16 05:12:56,394   seed=45 ep=22 val_auroc=0.640 wall=48.8s
+2026-05-16 05:13:46,051   seed=45 ep=23 val_auroc=0.609 wall=49.7s
+2026-05-16 05:14:34,786   seed=45 ep=24 val_auroc=0.546 wall=48.7s
+2026-05-16 05:15:23,368   seed=45 ep=25 val_auroc=0.610 wall=48.6s
+2026-05-16 05:16:11,502   seed=45 ep=26 val_auroc=0.605 wall=48.1s
+2026-05-16 05:16:59,756   seed=45 ep=27 val_auroc=0.643 wall=48.3s
+2026-05-16 05:17:48,251   seed=45 ep=28 val_auroc=0.550 wall=48.5s
+2026-05-16 05:18:36,415   seed=45 ep=29 val_auroc=0.621 wall=48.2s
+2026-05-16 05:19:24,275   seed=45 ep=30 val_auroc=0.604 wall=47.9s
+2026-05-16 05:20:12,864   seed=45 ep=31 val_auroc=0.540 wall=48.6s
+2026-05-16 05:21:03,710   seed=45 ep=32 val_auroc=0.617 wall=50.8s
+2026-05-16 05:21:52,439   seed=45 ep=33 val_auroc=0.605 wall=48.7s
+2026-05-16 05:22:41,855   seed=45 ep=34 val_auroc=0.664 wall=49.4s
+2026-05-16 05:23:30,987   seed=45 ep=35 val_auroc=0.542 wall=49.1s
+2026-05-16 05:24:19,573   seed=45 ep=36 val_auroc=0.630 wall=48.6s
+2026-05-16 05:25:08,649   seed=45 ep=37 val_auroc=0.571 wall=49.1s
+2026-05-16 05:25:57,960   seed=45 ep=38 val_auroc=0.611 wall=49.3s
+2026-05-16 05:26:47,380   seed=45 ep=39 val_auroc=0.569 wall=49.4s
+2026-05-16 05:27:35,606   seed=45 ep=40 val_auroc=0.621 wall=48.2s
+2026-05-16 05:28:24,651   seed=45 ep=41 val_auroc=0.609 wall=49.0s
+2026-05-16 05:29:13,513   seed=45 ep=42 val_auroc=0.600 wall=48.9s
+2026-05-16 05:30:03,243   seed=45 ep=43 val_auroc=0.614 wall=49.7s
+2026-05-16 05:30:52,084   seed=45 ep=44 val_auroc=0.619 wall=48.8s
+2026-05-16 05:31:41,422   seed=45 ep=45 val_auroc=0.615 wall=49.3s
+2026-05-16 05:32:29,441   seed=45 ep=46 val_auroc=0.541 wall=48.0s
+2026-05-16 05:33:18,127   seed=45 ep=47 val_auroc=0.653 wall=48.7s
+2026-05-16 05:34:06,874   seed=45 ep=48 val_auroc=0.631 wall=48.7s
+2026-05-16 05:34:55,387   seed=45 ep=49 val_auroc=0.651 wall=48.5s
+2026-05-16 05:35:44,252   seed=45 ep=50 val_auroc=0.607 wall=48.9s
+2026-05-16 05:36:32,780   seed=45 ep=51 val_auroc=0.662 wall=48.5s
+2026-05-16 05:37:22,470   seed=45 ep=52 val_auroc=0.671 wall=49.7s
+2026-05-16 05:38:10,903   seed=45 ep=53 val_auroc=0.647 wall=48.4s
+2026-05-16 05:38:59,399   seed=45 ep=54 val_auroc=0.654 wall=48.5s
+2026-05-16 05:39:48,923   seed=45 ep=55 val_auroc=0.548 wall=49.5s
+2026-05-16 05:40:38,632   seed=45 ep=56 val_auroc=0.548 wall=49.7s
+2026-05-16 05:41:27,533   seed=45 ep=57 val_auroc=0.610 wall=48.9s
+2026-05-16 05:42:15,988   seed=45 ep=58 val_auroc=0.545 wall=48.5s
+2026-05-16 05:43:05,524   seed=45 ep=59 val_auroc=0.649 wall=49.5s
+2026-05-16 05:43:53,658   seed=45 ep=60 val_auroc=0.640 wall=48.1s
+2026-05-16 05:43:53,658   seed=45 best ep=4 val_auroc=0.683
+2026-05-16 05:43:58,935   seed=45 TEST acc=0.584 auroc=0.670
+2026-05-16 05:43:58,939 --- Distilled member 5 / 5 (seed=46) ---
+2026-05-16 05:44:52,210   seed=46 ep= 1 val_auroc=0.554 wall=53.3s
+2026-05-16 05:45:42,715   seed=46 ep= 2 val_auroc=0.657 wall=50.5s
+2026-05-16 05:46:33,059   seed=46 ep= 3 val_auroc=0.625 wall=50.3s
+2026-05-16 05:47:30,409   seed=46 ep= 4 val_auroc=0.670 wall=57.3s
+2026-05-16 05:48:28,441   seed=46 ep= 5 val_auroc=0.654 wall=58.0s
+2026-05-16 05:49:18,293   seed=46 ep= 6 val_auroc=0.650 wall=49.9s
+2026-05-16 05:50:07,658   seed=46 ep= 7 val_auroc=0.666 wall=49.4s
+2026-05-16 05:50:57,926   seed=46 ep= 8 val_auroc=0.573 wall=50.3s
+2026-05-16 05:51:46,623   seed=46 ep= 9 val_auroc=0.649 wall=48.7s
+2026-05-16 05:52:34,902   seed=46 ep=10 val_auroc=0.547 wall=48.3s
+2026-05-16 05:53:23,434   seed=46 ep=11 val_auroc=0.544 wall=48.5s
+2026-05-16 05:54:11,947   seed=46 ep=12 val_auroc=0.665 wall=48.5s
+2026-05-16 05:55:00,739   seed=46 ep=13 val_auroc=0.641 wall=48.8s
+2026-05-16 05:55:49,885   seed=46 ep=14 val_auroc=0.660 wall=49.1s
+2026-05-16 05:56:39,030   seed=46 ep=15 val_auroc=0.623 wall=49.1s
+2026-05-16 05:57:27,571   seed=46 ep=16 val_auroc=0.673 wall=48.5s
+2026-05-16 05:58:15,258   seed=46 ep=17 val_auroc=0.632 wall=47.7s
+2026-05-16 05:59:04,466   seed=46 ep=18 val_auroc=0.643 wall=49.2s
+2026-05-16 05:59:52,838   seed=46 ep=19 val_auroc=0.641 wall=48.4s
+2026-05-16 06:00:43,433   seed=46 ep=20 val_auroc=0.617 wall=50.6s
+2026-05-16 06:01:32,439   seed=46 ep=21 val_auroc=0.643 wall=49.0s
+2026-05-16 06:02:21,515   seed=46 ep=22 val_auroc=0.627 wall=49.1s
+2026-05-16 06:03:11,127   seed=46 ep=23 val_auroc=0.613 wall=49.6s
+2026-05-16 06:04:01,032   seed=46 ep=24 val_auroc=0.622 wall=49.9s
+2026-05-16 06:04:50,062   seed=46 ep=25 val_auroc=0.632 wall=49.0s
+2026-05-16 06:05:38,697   seed=46 ep=26 val_auroc=0.550 wall=48.6s
+2026-05-16 06:06:27,463   seed=46 ep=27 val_auroc=0.655 wall=48.8s
+2026-05-16 06:07:15,676   seed=46 ep=28 val_auroc=0.627 wall=48.2s
+2026-05-16 06:08:04,745   seed=46 ep=29 val_auroc=0.611 wall=49.1s
+2026-05-16 06:08:52,946   seed=46 ep=30 val_auroc=0.552 wall=48.2s
+2026-05-16 06:09:42,633   seed=46 ep=31 val_auroc=0.667 wall=49.7s
+2026-05-16 06:10:31,205   seed=46 ep=32 val_auroc=0.540 wall=48.6s
+2026-05-16 06:11:20,070   seed=46 ep=33 val_auroc=0.620 wall=48.9s
+2026-05-16 06:12:09,114   seed=46 ep=34 val_auroc=0.544 wall=49.0s
+2026-05-16 06:12:57,851   seed=46 ep=35 val_auroc=0.603 wall=48.7s
+2026-05-16 06:13:46,767   seed=46 ep=36 val_auroc=0.587 wall=48.9s
+2026-05-16 06:14:37,076   seed=46 ep=37 val_auroc=0.663 wall=50.3s
+2026-05-16 06:15:34,696   seed=46 ep=38 val_auroc=0.537 wall=57.6s
+2026-05-16 06:16:32,059   seed=46 ep=39 val_auroc=0.545 wall=57.4s
+2026-05-16 06:17:29,743   seed=46 ep=40 val_auroc=0.629 wall=57.7s
+2026-05-16 06:18:28,131   seed=46 ep=41 val_auroc=0.615 wall=58.4s
+2026-05-16 06:19:24,809   seed=46 ep=42 val_auroc=0.550 wall=56.7s
+2026-05-16 06:20:22,493   seed=46 ep=43 val_auroc=0.633 wall=57.7s
+2026-05-16 06:21:20,984   seed=46 ep=44 val_auroc=0.605 wall=58.5s
+2026-05-16 06:22:18,074   seed=46 ep=45 val_auroc=0.614 wall=57.1s
+2026-05-16 06:23:15,642   seed=46 ep=46 val_auroc=0.624 wall=57.6s
+2026-05-16 06:24:04,859   seed=46 ep=47 val_auroc=0.571 wall=49.2s
+2026-05-16 06:24:53,279   seed=46 ep=48 val_auroc=0.575 wall=48.4s
+2026-05-16 06:25:41,283   seed=46 ep=49 val_auroc=0.639 wall=48.0s
+2026-05-16 06:26:29,378   seed=46 ep=50 val_auroc=0.553 wall=48.1s
+2026-05-16 06:27:18,338   seed=46 ep=51 val_auroc=0.635 wall=49.0s
+2026-05-16 06:28:07,617   seed=46 ep=52 val_auroc=0.547 wall=49.3s
+2026-05-16 06:28:57,133   seed=46 ep=53 val_auroc=0.567 wall=49.5s
+2026-05-16 06:29:46,509   seed=46 ep=54 val_auroc=0.661 wall=49.4s
+2026-05-16 06:30:36,323   seed=46 ep=55 val_auroc=0.634 wall=49.8s
+2026-05-16 06:31:25,963   seed=46 ep=56 val_auroc=0.604 wall=49.6s
+2026-05-16 06:32:14,396   seed=46 ep=57 val_auroc=0.551 wall=48.4s
+2026-05-16 06:33:02,773   seed=46 ep=58 val_auroc=0.662 wall=48.4s
+2026-05-16 06:33:51,329   seed=46 ep=59 val_auroc=0.622 wall=48.6s
+2026-05-16 06:34:39,188   seed=46 ep=60 val_auroc=0.628 wall=47.9s
+2026-05-16 06:34:39,188   seed=46 best ep=16 val_auroc=0.673
+2026-05-16 06:34:44,103   seed=46 TEST acc=0.642 auroc=0.668
+2026-05-16 06:34:44,108 DISTILLED ENSEMBLE soft-sum: acc=0.635 auroc=0.685
+2026-05-16 06:34:44,109 Wrote /home/anward/project/graphtm-cbr/results/distill_ensemble_ames_1778913284.json

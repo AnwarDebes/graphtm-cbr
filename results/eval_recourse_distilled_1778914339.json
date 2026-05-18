@@ -1,0 +1,51 @@
+{
+  "ensemble_size": 5,
+  "test_acc": 0.635116598079561,
+  "test_auroc": 0.6848640766429425,
+  "recourse_success_rate": 0.955,
+  "mean_flips": 1.2984293193717278,
+  "latency_ms_p50": 2125.916004180908,
+  "latency_ms_p95": 6774.74762201309,
+  "top_edits": [
+    {
+      "key": "('remove_bond', 4, 5)",
+      "count": 14
+    },
+    {
+      "key": "('swap_atom', 2)",
+      "count": 13
+    },
+    {
+      "key": "('remove_bond', 3, 4)",
+      "count": 11
+    },
+    {
+      "key": "('remove_bond', 0, 1)",
+      "count": 10
+    },
+    {
+      "key": "('remove_bond', 6, 7)",
+      "count": 10
+    },
+    {
+      "key": "('remove_bond', 2, 3)",
+      "count": 10
+    },
+    {
+      "key": "('remove_bond', 1, 2)",
+      "count": 9
+    },
+    {
+      "key": "('remove_bond', 9, 10)",
+      "count": 9
+    },
+    {
+      "key": "('remove_bond', 11, 12)",
+      "count": 8
+    },
+    {
+      "key": "('remove_bond', 8, 9)",
+      "count": 8
+    }
+  ]
+}

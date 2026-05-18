@@ -1,0 +1,70 @@
+{
+  "config": {
+    "K": 5,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "epochs": 60,
+    "n_clauses": 2000,
+    "T": 500,
+    "s": 3.9,
+    "D_bits": 512,
+    "max_nodes": 60
+  },
+  "members": [
+    {
+      "seed": 42,
+      "best_epoch": 5,
+      "best_valid_auroc": 0.6918204602415129,
+      "test_acc": 0.5829903978052127,
+      "test_auroc": 0.670648412590477,
+      "wall_min": 49.268399528662364
+    },
+    {
+      "seed": 43,
+      "best_epoch": 5,
+      "best_valid_auroc": 0.6777511961722488,
+      "test_acc": 0.6104252400548696,
+      "test_auroc": 0.6597722773773366,
+      "wall_min": 49.57479761838913
+    },
+    {
+      "seed": 44,
+      "best_epoch": 7,
+      "best_valid_auroc": 0.686583883952305,
+      "test_acc": 0.48010973936899864,
+      "test_auroc": 0.6459608323133414,
+      "wall_min": 49.96190710465113
+    },
+    {
+      "seed": 45,
+      "best_epoch": 4,
+      "best_valid_auroc": 0.6877838535733273,
+      "test_acc": 0.5473251028806584,
+      "test_auroc": 0.6616498179125678,
+      "wall_min": 49.58951038122177
+    },
+    {
+      "seed": 46,
+      "best_epoch": 7,
+      "best_valid_auroc": 0.6873395610237716,
+      "test_acc": 0.5294924554183813,
+      "test_auroc": 0.6609244903818547,
+      "wall_min": 49.55159852902094
+    }
+  ],
+  "ensemble_soft_sum": {
+    "test_acc": 0.5747599451303155,
+    "test_auroc": 0.6690730918597095
+  },
+  "ensemble_hard_majority": {
+    "test_acc": 0.5637860082304527
+  },
+  "n_train": 5822,
+  "n_valid": 727,
+  "n_test": 729
+}

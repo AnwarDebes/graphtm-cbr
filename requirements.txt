@@ -1,0 +1,34 @@
+# graphtm-cbr: Hierarchical Graph Tsetlin Machine with Counterfactual Boolean Recourse
+# Pinned dependencies for the paper-tier pipeline.
+
+# Core numerical
+numpy>=1.24,<3.0
+numba>=0.59           # @njit + @cuda.jit for HGTM training kernels
+
+# CUDA-C kernel glue
+# pycuda is the only dependency that talks to the NVIDIA driver directly;
+# everything else uses torch.cuda. pycuda's SourceModule loads my .cu kernels.
+pycuda>=2024.1
+
+# Neural-network teacher (GIN)
+torch>=2.6            # GIN teacher; cu126 build for V100/A100/4090
+torch-geometric>=2.7  # MoleculeNet, TUDataset utilities
+
+# Datasets
+# TDC ships AMES and similar pharma assays. Use a recent build matched to torch>=2.6.
+PyTDC>=1.0
+
+# Sklearn baselines (Morgan-FP + LR/RF)
+scikit-learn>=1.5
+
+# Chemistry: SMILES parsing, validity, scaffold split
+rdkit>=2024.3
+
+# Configuration files (Kazius toxicophore YAML, experiment YAML)
+pyyaml>=6.0
+
+# Plot output for the paper figures
+matplotlib>=3.8
+
+# Testing
+pytest>=8.0

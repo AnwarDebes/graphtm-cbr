@@ -1,0 +1,703 @@
+{
+  "seed": 42,
+  "n_alerts_total": 29,
+  "n_alerts_present_in_test": 21,
+  "n_alerts_covered": 21,
+  "covered_alerts": [
+    "aliphatic_aldehyde",
+    "aliphatic_halide",
+    "alpha_beta_unsat_carbonyl",
+    "aromatic_amine",
+    "aromatic_azo",
+    "aromatic_nitro",
+    "azide",
+    "aziridine",
+    "bay_region_PAH",
+    "carbamate",
+    "epoxide",
+    "halogen_rich",
+    "halogenated_aromatic",
+    "hydrazine",
+    "large_hydrophobic_w_heteroatom",
+    "nitro_aromatic_ring_fused",
+    "nitrosamine",
+    "phosphonate_ester",
+    "polycyclic_aromatic",
+    "pure_hydrocarbon",
+    "sulfonate_ester"
+  ],
+  "alert_clause_map": {
+    "aromatic_nitro": [
+      {
+        "clause_id": 0,
+        "co_fire": 34,
+        "alert_pos": 38,
+        "clause_fire": 105
+      },
+      {
+        "clause_id": 1,
+        "co_fire": 38,
+        "alert_pos": 38,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 2,
+        "co_fire": 38,
+        "alert_pos": 38,
+        "clause_fire": 228
+      },
+      {
+        "clause_id": 3,
+        "co_fire": 34,
+        "alert_pos": 38,
+        "clause_fire": 103
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 38,
+        "alert_pos": 38,
+        "clause_fire": 728
+      }
+    ],
+    "aromatic_amine": [
+      {
+        "clause_id": 0,
+        "co_fire": 54,
+        "alert_pos": 92,
+        "clause_fire": 105
+      },
+      {
+        "clause_id": 1,
+        "co_fire": 91,
+        "alert_pos": 92,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 2,
+        "co_fire": 49,
+        "alert_pos": 92,
+        "clause_fire": 228
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 92,
+        "alert_pos": 92,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 84,
+        "alert_pos": 92,
+        "clause_fire": 597
+      }
+    ],
+    "aromatic_azo": [
+      {
+        "clause_id": 0,
+        "co_fire": 12,
+        "alert_pos": 12,
+        "clause_fire": 105
+      },
+      {
+        "clause_id": 1,
+        "co_fire": 12,
+        "alert_pos": 12,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 12,
+        "alert_pos": 12,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 11,
+        "alert_pos": 12,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 12,
+        "alert_pos": 12,
+        "clause_fire": 729
+      }
+    ],
+    "nitrosamine": [
+      {
+        "clause_id": 1,
+        "co_fire": 5,
+        "alert_pos": 7,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 2,
+        "co_fire": 7,
+        "alert_pos": 7,
+        "clause_fire": 228
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 7,
+        "alert_pos": 7,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 7,
+        "alert_pos": 7,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 7,
+        "alert_pos": 7,
+        "clause_fire": 729
+      }
+    ],
+    "aliphatic_halide": [
+      {
+        "clause_id": 1,
+        "co_fire": 15,
+        "alert_pos": 15,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 15,
+        "alert_pos": 15,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 13,
+        "alert_pos": 15,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 15,
+        "alert_pos": 15,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 7,
+        "co_fire": 7,
+        "alert_pos": 15,
+        "clause_fire": 388
+      }
+    ],
+    "halogenated_aromatic": [
+      {
+        "clause_id": 1,
+        "co_fire": 12,
+        "alert_pos": 12,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 2,
+        "co_fire": 9,
+        "alert_pos": 12,
+        "clause_fire": 228
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 12,
+        "alert_pos": 12,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 12,
+        "alert_pos": 12,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 12,
+        "alert_pos": 12,
+        "clause_fire": 729
+      }
+    ],
+    "halogen_rich": [
+      {
+        "clause_id": 1,
+        "co_fire": 2,
+        "alert_pos": 2,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 2,
+        "co_fire": 2,
+        "alert_pos": 2,
+        "clause_fire": 228
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 2,
+        "alert_pos": 2,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 2,
+        "alert_pos": 2,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 2,
+        "alert_pos": 2,
+        "clause_fire": 729
+      }
+    ],
+    "polycyclic_aromatic": [
+      {
+        "clause_id": 1,
+        "co_fire": 81,
+        "alert_pos": 81,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 81,
+        "alert_pos": 81,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 81,
+        "alert_pos": 81,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 8,
+        "co_fire": 81,
+        "alert_pos": 81,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 10,
+        "co_fire": 70,
+        "alert_pos": 81,
+        "clause_fire": 717
+      }
+    ],
+    "epoxide": [
+      {
+        "clause_id": 1,
+        "co_fire": 51,
+        "alert_pos": 71,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 71,
+        "alert_pos": 71,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 44,
+        "alert_pos": 71,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 71,
+        "alert_pos": 71,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 8,
+        "co_fire": 71,
+        "alert_pos": 71,
+        "clause_fire": 729
+      }
+    ],
+    "aziridine": [
+      {
+        "clause_id": 1,
+        "co_fire": 16,
+        "alert_pos": 17,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 17,
+        "alert_pos": 17,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 11,
+        "alert_pos": 17,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 17,
+        "alert_pos": 17,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 7,
+        "co_fire": 10,
+        "alert_pos": 17,
+        "clause_fire": 388
+      }
+    ],
+    "azide": [
+      {
+        "clause_id": 0,
+        "co_fire": 3,
+        "alert_pos": 3,
+        "clause_fire": 105
+      },
+      {
+        "clause_id": 1,
+        "co_fire": 3,
+        "alert_pos": 3,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 2,
+        "co_fire": 3,
+        "alert_pos": 3,
+        "clause_fire": 228
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 3,
+        "alert_pos": 3,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 3,
+        "alert_pos": 3,
+        "clause_fire": 597
+      }
+    ],
+    "aliphatic_aldehyde": [
+      {
+        "clause_id": 1,
+        "co_fire": 8,
+        "alert_pos": 8,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 8,
+        "alert_pos": 8,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 8,
+        "alert_pos": 8,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 8,
+        "alert_pos": 8,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 7,
+        "co_fire": 8,
+        "alert_pos": 8,
+        "clause_fire": 388
+      }
+    ],
+    "alpha_beta_unsat_carbonyl": [
+      {
+        "clause_id": 1,
+        "co_fire": 48,
+        "alert_pos": 48,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 48,
+        "alert_pos": 48,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 48,
+        "alert_pos": 48,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 48,
+        "alert_pos": 48,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 7,
+        "co_fire": 48,
+        "alert_pos": 48,
+        "clause_fire": 388
+      }
+    ],
+    "nitro_aromatic_ring_fused": [
+      {
+        "clause_id": 0,
+        "co_fire": 4,
+        "alert_pos": 4,
+        "clause_fire": 105
+      },
+      {
+        "clause_id": 1,
+        "co_fire": 4,
+        "alert_pos": 4,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 2,
+        "co_fire": 4,
+        "alert_pos": 4,
+        "clause_fire": 228
+      },
+      {
+        "clause_id": 3,
+        "co_fire": 4,
+        "alert_pos": 4,
+        "clause_fire": 103
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 4,
+        "alert_pos": 4,
+        "clause_fire": 728
+      }
+    ],
+    "hydrazine": [
+      {
+        "clause_id": 1,
+        "co_fire": 2,
+        "alert_pos": 3,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 2,
+        "co_fire": 2,
+        "alert_pos": 3,
+        "clause_fire": 228
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 3,
+        "alert_pos": 3,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 2,
+        "alert_pos": 3,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 3,
+        "alert_pos": 3,
+        "clause_fire": 729
+      }
+    ],
+    "sulfonate_ester": [
+      {
+        "clause_id": 1,
+        "co_fire": 3,
+        "alert_pos": 3,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 2,
+        "co_fire": 1,
+        "alert_pos": 3,
+        "clause_fire": 228
+      },
+      {
+        "clause_id": 3,
+        "co_fire": 1,
+        "alert_pos": 3,
+        "clause_fire": 103
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 3,
+        "alert_pos": 3,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 3,
+        "alert_pos": 3,
+        "clause_fire": 597
+      }
+    ],
+    "phosphonate_ester": [
+      {
+        "clause_id": 1,
+        "co_fire": 2,
+        "alert_pos": 2,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 2,
+        "alert_pos": 2,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 2,
+        "alert_pos": 2,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 2,
+        "alert_pos": 2,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 7,
+        "co_fire": 2,
+        "alert_pos": 2,
+        "clause_fire": 388
+      }
+    ],
+    "carbamate": [
+      {
+        "clause_id": 1,
+        "co_fire": 6,
+        "alert_pos": 6,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 2,
+        "co_fire": 3,
+        "alert_pos": 6,
+        "clause_fire": 228
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 6,
+        "alert_pos": 6,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 6,
+        "alert_pos": 6,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 6,
+        "alert_pos": 6,
+        "clause_fire": 729
+      }
+    ],
+    "pure_hydrocarbon": [
+      {
+        "clause_id": 1,
+        "co_fire": 593,
+        "alert_pos": 634,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 633,
+        "alert_pos": 634,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 510,
+        "alert_pos": 634,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 634,
+        "alert_pos": 634,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 7,
+        "co_fire": 332,
+        "alert_pos": 634,
+        "clause_fire": 388
+      }
+    ],
+    "large_hydrophobic_w_heteroatom": [
+      {
+        "clause_id": 1,
+        "co_fire": 388,
+        "alert_pos": 411,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 411,
+        "alert_pos": 411,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 338,
+        "alert_pos": 411,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 411,
+        "alert_pos": 411,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 7,
+        "co_fire": 240,
+        "alert_pos": 411,
+        "clause_fire": 388
+      }
+    ],
+    "bay_region_PAH": [
+      {
+        "clause_id": 1,
+        "co_fire": 14,
+        "alert_pos": 14,
+        "clause_fire": 680
+      },
+      {
+        "clause_id": 4,
+        "co_fire": 14,
+        "alert_pos": 14,
+        "clause_fire": 728
+      },
+      {
+        "clause_id": 5,
+        "co_fire": 8,
+        "alert_pos": 14,
+        "clause_fire": 597
+      },
+      {
+        "clause_id": 6,
+        "co_fire": 14,
+        "alert_pos": 14,
+        "clause_fire": 729
+      },
+      {
+        "clause_id": 8,
+        "co_fire": 14,
+        "alert_pos": 14,
+        "clause_fire": 729
+      }
+    ]
+  }
+}

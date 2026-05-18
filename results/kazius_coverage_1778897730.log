@@ -1,0 +1,42 @@
+2026-05-16 02:15:30,342 Loading model seed=42
+2026-05-16 02:15:35,835 Loading AMES + Kazius alerts
+2026-05-16 02:15:35,964 Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-05-16 02:15:35,964 Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-05-16 02:15:35,964 NumExpr defaulting to 8 threads.
+2026-05-16 02:15:39,787 loaded 29 Kazius toxicophores
+2026-05-16 02:15:42,349 encoded 729 test mols
+2026-05-16 02:15:42,888 Alerts hit in test set: [('aromatic_nitro', 38), ('aromatic_amine', 92), ('aromatic_azo', 12), ('nitrosamine', 7), ('aliphatic_halide', 15), ('halogenated_aromatic', 12), ('halogen_rich', 2), ('polycyclic_aromatic', 81), ('epoxide', 71), ('aziridine', 17)]
+2026-05-16 02:15:42,889 Collecting firing clauses per molecule...
+2026-05-16 02:15:42,889   0 / 729
+2026-05-16 02:15:45,530   100 / 729
+2026-05-16 02:15:48,329   200 / 729
+2026-05-16 02:15:51,017   300 / 729
+2026-05-16 02:15:53,624   400 / 729
+2026-05-16 02:15:56,336   500 / 729
+2026-05-16 02:15:58,940   600 / 729
+2026-05-16 02:16:01,781   700 / 729
+2026-05-16 02:16:03,474 === KAZIUS COVERAGE ===
+2026-05-16 02:16:03,475 Alerts present in test set: 21 / 29
+2026-05-16 02:16:03,475 Alerts COVERED by ≥1 clause (≥50% co-fire): 21 / 21
+2026-05-16 02:16:03,475   aliphatic_aldehyde : top clauses [(1, 8, 8, 680), (4, 8, 8, 728), (5, 8, 8, 597)]
+2026-05-16 02:16:03,475   aliphatic_halide : top clauses [(1, 15, 15, 680), (4, 15, 15, 728), (5, 13, 15, 597)]
+2026-05-16 02:16:03,475   alpha_beta_unsat_carbonyl : top clauses [(1, 48, 48, 680), (4, 48, 48, 728), (5, 48, 48, 597)]
+2026-05-16 02:16:03,475   aromatic_amine : top clauses [(0, 54, 92, 105), (1, 91, 92, 680), (2, 49, 92, 228)]
+2026-05-16 02:16:03,475   aromatic_azo : top clauses [(0, 12, 12, 105), (1, 12, 12, 680), (4, 12, 12, 728)]
+2026-05-16 02:16:03,475   aromatic_nitro : top clauses [(0, 34, 38, 105), (1, 38, 38, 680), (2, 38, 38, 228)]
+2026-05-16 02:16:03,475   azide : top clauses [(0, 3, 3, 105), (1, 3, 3, 680), (2, 3, 3, 228)]
+2026-05-16 02:16:03,475   aziridine : top clauses [(1, 16, 17, 680), (4, 17, 17, 728), (5, 11, 17, 597)]
+2026-05-16 02:16:03,475   bay_region_PAH : top clauses [(1, 14, 14, 680), (4, 14, 14, 728), (5, 8, 14, 597)]
+2026-05-16 02:16:03,475   carbamate : top clauses [(1, 6, 6, 680), (2, 3, 6, 228), (4, 6, 6, 728)]
+2026-05-16 02:16:03,475   epoxide : top clauses [(1, 51, 71, 680), (4, 71, 71, 728), (5, 44, 71, 597)]
+2026-05-16 02:16:03,475   halogen_rich : top clauses [(1, 2, 2, 680), (2, 2, 2, 228), (4, 2, 2, 728)]
+2026-05-16 02:16:03,475   halogenated_aromatic : top clauses [(1, 12, 12, 680), (2, 9, 12, 228), (4, 12, 12, 728)]
+2026-05-16 02:16:03,475   hydrazine : top clauses [(1, 2, 3, 680), (2, 2, 3, 228), (4, 3, 3, 728)]
+2026-05-16 02:16:03,476   large_hydrophobic_w_heteroatom : top clauses [(1, 388, 411, 680), (4, 411, 411, 728), (5, 338, 411, 597)]
+2026-05-16 02:16:03,476   nitro_aromatic_ring_fused : top clauses [(0, 4, 4, 105), (1, 4, 4, 680), (2, 4, 4, 228)]
+2026-05-16 02:16:03,476   nitrosamine : top clauses [(1, 5, 7, 680), (2, 7, 7, 228), (4, 7, 7, 728)]
+2026-05-16 02:16:03,476   phosphonate_ester : top clauses [(1, 2, 2, 680), (4, 2, 2, 728), (5, 2, 2, 597)]
+2026-05-16 02:16:03,476   polycyclic_aromatic : top clauses [(1, 81, 81, 680), (4, 81, 81, 728), (6, 81, 81, 729)]
+2026-05-16 02:16:03,476   pure_hydrocarbon : top clauses [(1, 593, 634, 680), (4, 633, 634, 728), (5, 510, 634, 597)]
+2026-05-16 02:16:03,476   sulfonate_ester : top clauses [(1, 3, 3, 680), (2, 1, 3, 228), (3, 1, 3, 103)]
+2026-05-16 02:16:03,477 Wrote /home/anward/project/graphtm-cbr/results/kazius_coverage_seed42_1778897763.json

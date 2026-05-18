@@ -1,0 +1,232 @@
+# Hierarchical Tsetlin Machine
+
+This repository proposes how Tsetlin Machines can learn AND-OR hierarchies.
+
+## Tsetlin Machines and Human-Level AI
+
+<p align="center">
+  <img width="90%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Symbolic_Symbolic_Tsetlin_Machine_AGI.png">
+</p>
+
+_CAIR aims to create a new route to Artificial General Intelligence (AGI) based on logical learning and scientific reasoning. This involves developing
+radical methodologies and theories that revitalize decades of research in logic-based and causal inference,
+including experiment design, while advancing machine learning capabilities to the Deep Learning (DL)/LLM-level and beyond.
+To this end, CAIR will devise a new class of inductive logic programming founded on the Tsetlin Machine paradigm, and
+then develop a framework for reflective reasoning that leverages the up-scaled pattern recognition capability of
+Tsetlin Machines. Upon success, the resulting AGI methodology will profoundly change the research landscape and the impact of AI._
+
+<p align="center">
+  <img width="90%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Six_Research_Challenges.png">
+</p>
+
+Although logical learning in Tsetlin Machines performs remarkably similar to multilayer neural networks and recent Tsetlin Machine advances show that they can
+provide superior pattern recognition accuracy in complex tasks, the symbolic-symbolic route
+to AGI crosses six unchartered research challenges (C1-C6 in the above figure):
+* __C1 Conceptualization.__ We need knowledge on how logical learning of symbolic representations can replicate and move beyond the inductive biases of DL/LLMs, ultimately surpassing human-level reactive thinking.
+* __C2 Introspection.__ We need to understand how various aspects of human introspection, including self-assessment, can be modeled symbolically with appropriate algorithmic and theoretical underpinnings.
+* __C3 Transparency.__ We need to discover how to build the steps towards AGI so that every step can be
+understood like engineers understand an airplane, enabling safety standards comparable to those in aviation.
+* __C4 Lifelong learning.__ We need knowledge of the modeling, algorithms, and theory required for lifelong
+symbolic-symbolic learning of knowledge, skills, and reflexes from human-like interactions with the world.
+* __C5 Generalization.__ We need to uncover how to go beyond the data and build “laws-of-nature” (a scientific
+world model) in a way that supports the solution to the other challenges.
+* __C6 Reactive and reflective thinking.__ We need knowledge on how to integrate the reactive thinking of C1
+with the reflective reasoning of C5, and how to coordinate these two modes through introspection (C2). We also
+need to understand how lifelong learning (C4) can be incorporated into both reactive and reflective thinking,
+for example, turning recurring reflective thinking patterns into reactive patterns for speed and automation.
+
+The methods introduced in this repository aim to address challenge C1 above. By introducing AND-OR hierarchies, we will enable the construction of high-level concepts, moving Tsetlin Machines decisively beyond flat AND-rules.
+
+## The Noisy Parity Problem
+
+### Noise
+<p align="center">
+  <img width="90%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Noisy_Parity_Problem.png">
+</p>
+
+### Non-Linearity
+
+<p align="center">
+  <img width="80%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Noisy_Parity_Problem_Non_Linearity.png">
+</p>
+
+### Abstraction
+
+<p align="center">
+  <img width="80%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Noisy_Parity_Problem_Abstraction.png">
+</p>
+
+### Generalization
+
+<p align="center">
+  <img width="80%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Noisy_Parity_Problem_Generalization.png">
+</p>
+
+## Vanilla Tsetlin Machine Solution to the Noisy Parity Problem
+
+### Clauses
+
+<p align="center">
+  <img width="60%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Vanilla_Tsetlin_Machine_Clauses.png">
+</p>
+
+### Target Model
+
+<p align="center">
+  <img width="40%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Vanilla_Tsetlin_Machine_Target_Model.png">
+</p>
+
+### Key Learning Aspect
+
+<p align="center">
+  <img width="20%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Vanilla_Tsetlin_Machine_Key_Learning_Aspect.png">
+</p>
+
+<p align="center">
+  <img width="40%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Vanilla_Tsetlin_Machine_Key_Learning_Aspect_II.png">
+</p>
+
+## Learning AND-OR Hierarchies With Nested Clauses
+
+### Hierarchical Clause Structure
+
+#### Leaves
+
+<p align="center">
+  <img width="40%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_Leaves.png">
+</p>
+
+#### Alternatives
+
+<p align="center">
+  <img width="60%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_Alternatives.png">
+</p>
+
+#### OR-Structure for Organizing Alternatives
+
+<p align="center">
+  <img width="30%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_OR_Structure.png">
+</p>
+
+#### AND-Structure for combining feature groups
+
+<p align="center">
+  <img width="50%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_AND_Structure.png">
+</p>
+
+### Inference in Hierarchies
+
+Inference is exactly as for vanilla Tsetlin machine, except for clause evaluation...
+
+#### Clause Evaluation
+
+<p align="center">
+  <img width="40%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_Clause_Evaluation_I.png">
+</p>
+
+<p align="center">
+  <img width="40%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_Clause_Evaluation_II.png">
+</p>
+
+#### Scaling Up
+
+<p align="center">
+  <img width="80%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_Complex_Alternatives.png">
+</p>
+
+<p align="center">
+  <img width="80%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_Nested_Clauses.png">
+</p>
+
+<p align="center">
+  <img width="80%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_Nested_Clause_Votes.png">
+</p>
+
+### Learning in Hierarchies
+
+A clause component is updated exactly as a standard clause, apart from a few crucial changes:
+
+<p align="center">
+  <img width="70%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_Type_I_Feedback.png">
+</p>
+
+**Type I Feedback (Target Class)**
+
+1. Record truth value of all AND-sub-expressions from leaf (**clause component**) to root (**clause**)
+2. Update clause component based on truth values:
+   * If all AND-sub-expressions on path are _True_ → Give **Type Ia Feedback** to clause component
+   * Otherwise, give it **Type Ib Feedback**
+
+**Type II Feedback (Other Classes)**
+
+<p align="center">
+  <img width="70%" src="https://github.com/cair/HierarchicalTsetlinMachine/blob/main/figures/Hierarchical_Tsetlin_Machine_Type_II_Feedback.png">
+</p>
+
+1. Record truth value of all AND-sub-expressions from leaf (**clause component**) to root (**clause**)
+2. Update clause component based on truth values:
+   * If all AND-sub-expressions on path are _True_ → Give **Type II Feedback** to clause component
+
+### Further Work
+
+* Full implementation in PyTsetlinMachineCUDA, TMU, PyTsetlinMachine, and GraphTsetlinMachine
+* Reuse/sharing of clause components
+* Flexible architecture composition (1D, 2D, 3D, graphs, ...)
+* Proof of concept applications (image understanding, natural language understanding, signal processing, etc.)
+* Theoretical analysis
+
+### Demo
+
+```bash
+make
+gcc -Wall -O3 -ffast-math -o NoisyParityDemo NoisyParityDemo.c MultiClassTsetlinMachine.c TsetlinMachine.c
+
+python3 ./NoisyParityData.py
+
+./NoisyParityDemo
+
+RUN 1 TIME: 850.848964
+Accuracy: 0.988850
+Average accuracy: 0.988850
+
+RUN 2 TIME: 868.053936
+Accuracy: 0.998850
+Average accuracy: 0.993850
+
+RUN 3 TIME: 840.775647
+Accuracy: 0.995350
+Average accuracy: 0.994350
+
+...
+
+RUN 10 TIME: 803.521219
+Accuracy: 0.992700
+Average accuracy: 0.994970
+```
+
+### Paper
+
+_A Tsetlin Machine for Logical Learning and Reasoning With AND-OR Hierarchies_. Ole-Christoffer Granmo, et al., 2026. (Forthcoming)
+
+## Licence
+MIT License
+
+Copyright (c) 2026 Ole-Christoffer Granmo and the University of Agder 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

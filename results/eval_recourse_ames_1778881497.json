@@ -1,0 +1,50 @@
+{
+  "n_evaluated": 200,
+  "successes": 90,
+  "success_rate": 0.45,
+  "mean_flips": 2.2222222222222223,
+  "latency_ms_p50": 1011.2656354904175,
+  "latency_ms_p95": 2217.512130737304,
+  "top_edits": [
+    {
+      "key": "('remove_bond', 0, 1)",
+      "count": 16
+    },
+    {
+      "key": "('remove_bond', 4, 5)",
+      "count": 10
+    },
+    {
+      "key": "('remove_bond', 1, 2)",
+      "count": 9
+    },
+    {
+      "key": "('remove_bond', 5, 6)",
+      "count": 9
+    },
+    {
+      "key": "('remove_bond', 9, 10)",
+      "count": 8
+    },
+    {
+      "key": "('swap_atom', 0)",
+      "count": 8
+    },
+    {
+      "key": "('remove_bond', 2, 3)",
+      "count": 8
+    },
+    {
+      "key": "('remove_bond', 8, 9)",
+      "count": 8
+    },
+    {
+      "key": "('remove_bond', 3, 4)",
+      "count": 7
+    },
+    {
+      "key": "('remove_bond', 7, 8)",
+      "count": 6
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "graphtm-cbr: Hierarchical Graph Tsetlin Machine with Counterfactual Boolean Recourse"
+abstract: >-
+  A graph-walking Hierarchical Tsetlin Machine combined with clause-driven
+  counterfactual Boolean recourse over chemically-actionable graph edits,
+  targeting ICH M7(R2) §6.1 mutagenicity assessment.
+author:
+  - name: Anwar
+    affiliation: "University of Agder"
+version: "0.2.0"
+date-released: "2026-05-16"
+license: MIT
+keywords:
+  - Tsetlin Machine
+  - Hierarchical Tsetlin Machine
+  - interpretable machine learning
+  - counterfactual explanations
+  - knowledge distillation
+  - graph neural networks
+  - molecular property prediction
+  - neuro-symbolic
+references:
+  - type: article
+    title: "The Tsetlin Machine Goes Deep: Logical Learning and Reasoning With Graphs"
+    authors:
+      - family-names: Granmo
+        given-names: Ole-Christoffer
+      - family-names: Abdelwahab
+        given-names: Youmna
+      - family-names: Andersen
+        given-names: Per-Arne
+      - family-names: Borgersen
+        given-names: Karl Audun K.
+      - family-names: Clarke
+        given-names: Paul F. A.
+      - family-names: Dumbre
+        given-names: Kunal
+      - family-names: "Grønningsæter"
+        given-names: Ylva
+      - family-names: Halenka
+        given-names: Vojtech
+      - family-names: Helin
+        given-names: Runar
+      - family-names: Jiao
+        given-names: Lei
+      - family-names: Khalid
+        given-names: Ahmed
+      - family-names: Omslandseter
+        given-names: Rebekka
+      - family-names: Saha
+        given-names: Rupsa
+      - family-names: Shende
+        given-names: Mayur
+      - family-names: Zhang
+        given-names: Xuan
+    year: 2025
+    identifiers:
+      - type: other
+        value: "arXiv:2507.14874"
+        description: "arXiv preprint ID"
+  - type: article
+    title: "Symbolic Graph Intelligence: Hypervector Message Passing for Learning Graph-Level Patterns with Tsetlin Machines"
+    authors:
+      - family-names: Blakely
+        given-names: Christian D.
+    year: 2025
+    identifiers:
+      - type: other
+        value: "arXiv:2507.16537"
+        description: "arXiv preprint ID"
+  - type: article
+    title: "Benchmark Data Set for In Silico Prediction of Ames Mutagenicity"
+    authors:
+      - family-names: Hansen
+        given-names: Katja
+      - family-names: Mika
+        given-names: Sebastian
+      - family-names: Schroeter
+        given-names: Timon
+    year: 2009
+    journal: "Journal of Chemical Information and Modeling"
+    volume: 49
+    issue: 9
+    start: 2077
+    end: 2081
+    doi: "10.1021/ci900161g"
+  - type: article
+    title: "Derivation and validation of toxicophores for mutagenicity prediction"
+    authors:
+      - family-names: Kazius
+        given-names: Jeroen
+      - family-names: McGuire
+        given-names: Ross
+      - family-names: Bursi
+        given-names: Roberta
+    year: 2005
+    journal: "Journal of Medicinal Chemistry"
+    volume: 48
+    issue: 1
+    start: 312
+    end: 320
+    doi: "10.1021/jm040835a"

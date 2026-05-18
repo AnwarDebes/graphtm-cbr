@@ -1,0 +1,51 @@
+{
+  "ensemble_size": 5,
+  "test_acc": 0.5747599451303155,
+  "test_auroc": 0.6690730918597095,
+  "recourse_success_rate": 0.545,
+  "mean_flips": 1.5137614678899083,
+  "latency_ms_p50": 3691.591739654541,
+  "latency_ms_p95": 8521.669447422018,
+  "top_edits": [
+    {
+      "key": "('remove_bond', 0, 1)",
+      "count": 9
+    },
+    {
+      "key": "('swap_atom', 0)",
+      "count": 9
+    },
+    {
+      "key": "('remove_bond', 4, 5)",
+      "count": 8
+    },
+    {
+      "key": "('remove_bond', 3, 4)",
+      "count": 6
+    },
+    {
+      "key": "('remove_bond', 8, 9)",
+      "count": 6
+    },
+    {
+      "key": "('swap_atom', 12)",
+      "count": 5
+    },
+    {
+      "key": "('remove_bond', 1, 2)",
+      "count": 5
+    },
+    {
+      "key": "('swap_atom', 11)",
+      "count": 4
+    },
+    {
+      "key": "('remove_bond', 6, 7)",
+      "count": 4
+    },
+    {
+      "key": "('remove_bond', 9, 10)",
+      "count": 4
+    }
+  ]
+}

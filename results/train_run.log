@@ -1,0 +1,82 @@
+2026-05-15 20:44:31,360 Loading TDC AMES (Hansen 2009)...
+2026-05-15 20:44:31,485 Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-05-15 20:44:31,485 Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-05-15 20:44:31,485 NumExpr defaulting to 8 threads.
+Found local copy...
+Loading...
+Done!
+2026-05-15 20:44:35,557 n_mols=7278 y_pos=0.546 splits tr=5822 va=727 te=729
+2026-05-15 20:44:35,557 Encoding (BSC D=512 k_hop=2 max_nodes=60 sparsity=0.30)...
+2026-05-15 20:44:49,854 encoded=7278 dropped_big=0 dropped_failed=0 (14.3s)
+2026-05-15 20:44:49,859 After encoding: tr=5822 va=727 te=729
+2026-05-15 20:44:49,860 Morgan-FP + RF baseline...
+2026-05-15 20:44:51,512 Morgan-RF baseline: acc=0.720 auroc=0.790 (1.1s)
+2026-05-15 20:44:51,514 HGTM spec: C=2000 T=500 s=3.90 FEATURES=32 literals/clause=1920 D_bits=512
+2026-05-15 20:44:51,518 Training HGTM: tr=5822 va=727 epochs=60
+2026-05-15 20:45:49,220 epoch= 1 valid_acc=0.517 valid_auroc=0.579 wall=52.8s
+2026-05-15 20:46:38,821 epoch= 2 valid_acc=0.479 valid_auroc=0.596 wall=44.7s
+2026-05-15 20:47:28,140 epoch= 3 valid_acc=0.469 valid_auroc=0.568 wall=44.4s
+2026-05-15 20:48:17,776 epoch= 4 valid_acc=0.508 valid_auroc=0.622 wall=44.7s
+2026-05-15 20:49:07,441 epoch= 5 valid_acc=0.619 valid_auroc=0.692 wall=44.7s
+2026-05-15 20:49:57,446 epoch= 6 valid_acc=0.556 valid_auroc=0.667 wall=44.8s
+2026-05-15 20:50:48,267 epoch= 7 valid_acc=0.472 valid_auroc=0.574 wall=45.9s
+2026-05-15 20:51:37,436 epoch= 8 valid_acc=0.565 valid_auroc=0.673 wall=44.1s
+2026-05-15 20:52:27,016 epoch= 9 valid_acc=0.468 valid_auroc=0.580 wall=44.7s
+2026-05-15 20:53:16,827 epoch=10 valid_acc=0.466 valid_auroc=0.551 wall=44.6s
+2026-05-15 20:54:06,178 epoch=11 valid_acc=0.469 valid_auroc=0.623 wall=44.4s
+2026-05-15 20:54:56,465 epoch=12 valid_acc=0.552 valid_auroc=0.624 wall=45.4s
+2026-05-15 20:55:47,232 epoch=13 valid_acc=0.556 valid_auroc=0.636 wall=45.9s
+2026-05-15 20:56:36,952 epoch=14 valid_acc=0.490 valid_auroc=0.624 wall=44.8s
+2026-05-15 20:57:26,227 epoch=15 valid_acc=0.553 valid_auroc=0.631 wall=44.4s
+2026-05-15 20:58:16,101 epoch=16 valid_acc=0.470 valid_auroc=0.604 wall=44.8s
+2026-05-15 20:59:05,999 epoch=17 valid_acc=0.470 valid_auroc=0.534 wall=45.0s
+2026-05-15 20:59:56,073 epoch=18 valid_acc=0.543 valid_auroc=0.606 wall=45.2s
+2026-05-15 21:00:45,093 epoch=19 valid_acc=0.604 valid_auroc=0.645 wall=44.1s
+2026-05-15 21:01:34,237 epoch=20 valid_acc=0.576 valid_auroc=0.641 wall=44.1s
+2026-05-15 21:02:23,936 epoch=21 valid_acc=0.470 valid_auroc=0.536 wall=44.7s
+2026-05-15 21:03:13,175 epoch=22 valid_acc=0.470 valid_auroc=0.528 wall=44.3s
+2026-05-15 21:04:02,470 epoch=23 valid_acc=0.470 valid_auroc=0.530 wall=44.4s
+2026-05-15 21:04:51,708 epoch=24 valid_acc=0.558 valid_auroc=0.617 wall=44.4s
+2026-05-15 21:05:40,878 epoch=25 valid_acc=0.470 valid_auroc=0.536 wall=44.3s
+2026-05-15 21:06:31,117 epoch=26 valid_acc=0.629 valid_auroc=0.654 wall=45.2s
+2026-05-15 21:07:21,274 epoch=27 valid_acc=0.567 valid_auroc=0.627 wall=45.3s
+2026-05-15 21:08:10,413 epoch=28 valid_acc=0.538 valid_auroc=0.617 wall=44.2s
+2026-05-15 21:09:00,824 epoch=29 valid_acc=0.552 valid_auroc=0.612 wall=45.5s
+2026-05-15 21:09:51,383 epoch=30 valid_acc=0.534 valid_auroc=0.589 wall=45.7s
+2026-05-15 21:10:40,584 epoch=31 valid_acc=0.541 valid_auroc=0.585 wall=44.3s
+2026-05-15 21:11:29,977 epoch=32 valid_acc=0.470 valid_auroc=0.533 wall=44.4s
+2026-05-15 21:12:19,395 epoch=33 valid_acc=0.575 valid_auroc=0.623 wall=44.5s
+2026-05-15 21:13:08,737 epoch=34 valid_acc=0.470 valid_auroc=0.539 wall=44.5s
+2026-05-15 21:13:58,395 epoch=35 valid_acc=0.470 valid_auroc=0.563 wall=44.8s
+2026-05-15 21:14:47,812 epoch=36 valid_acc=0.470 valid_auroc=0.531 wall=44.5s
+2026-05-15 21:15:37,084 epoch=37 valid_acc=0.470 valid_auroc=0.527 wall=44.3s
+2026-05-15 21:16:26,264 epoch=38 valid_acc=0.535 valid_auroc=0.590 wall=44.2s
+2026-05-15 21:17:17,085 epoch=39 valid_acc=0.470 valid_auroc=0.538 wall=45.7s
+2026-05-15 21:18:07,039 epoch=40 valid_acc=0.601 valid_auroc=0.665 wall=45.1s
+2026-05-15 21:18:56,512 epoch=41 valid_acc=0.480 valid_auroc=0.594 wall=44.4s
+2026-05-15 21:19:45,664 epoch=42 valid_acc=0.545 valid_auroc=0.610 wall=44.2s
+2026-05-15 21:20:34,781 epoch=43 valid_acc=0.470 valid_auroc=0.531 wall=44.2s
+2026-05-15 21:21:25,553 epoch=44 valid_acc=0.624 valid_auroc=0.650 wall=45.8s
+2026-05-15 21:22:16,031 epoch=45 valid_acc=0.470 valid_auroc=0.531 wall=45.6s
+2026-05-15 21:23:05,962 epoch=46 valid_acc=0.470 valid_auroc=0.535 wall=45.1s
+2026-05-15 21:23:55,745 epoch=47 valid_acc=0.531 valid_auroc=0.587 wall=44.6s
+2026-05-15 21:24:45,699 epoch=48 valid_acc=0.532 valid_auroc=0.589 wall=44.8s
+2026-05-15 21:25:35,011 epoch=49 valid_acc=0.558 valid_auroc=0.604 wall=44.4s
+2026-05-15 21:26:26,466 epoch=50 valid_acc=0.534 valid_auroc=0.587 wall=46.0s
+2026-05-15 21:27:16,302 epoch=51 valid_acc=0.470 valid_auroc=0.534 wall=44.8s
+2026-05-15 21:28:06,996 epoch=52 valid_acc=0.543 valid_auroc=0.596 wall=45.5s
+2026-05-15 21:28:57,289 epoch=53 valid_acc=0.569 valid_auroc=0.608 wall=45.1s
+2026-05-15 21:29:48,343 epoch=54 valid_acc=0.535 valid_auroc=0.583 wall=45.9s
+2026-05-15 21:30:38,023 epoch=55 valid_acc=0.549 valid_auroc=0.603 wall=44.8s
+2026-05-15 21:31:28,564 epoch=56 valid_acc=0.470 valid_auroc=0.526 wall=45.5s
+2026-05-15 21:32:19,539 epoch=57 valid_acc=0.470 valid_auroc=0.532 wall=46.1s
+2026-05-15 21:33:08,999 epoch=58 valid_acc=0.563 valid_auroc=0.624 wall=44.4s
+2026-05-15 21:33:58,531 epoch=59 valid_acc=0.546 valid_auroc=0.592 wall=44.4s
+2026-05-15 21:34:49,958 epoch=60 valid_acc=0.532 valid_auroc=0.582 wall=46.5s
+2026-05-15 21:34:49,958 HGTM total train wall: 50.0 min
+2026-05-15 21:34:49,959 Test eval...
+2026-05-15 21:34:55,062 HGTM TEST: acc=0.487 auroc=0.544
+2026-05-15 21:34:55,064 Morgan-FP RF baseline: acc=0.720 auroc=0.790
+2026-05-15 21:34:55,064 GAP (HGTM - Morgan-RF) AUROC: -0.246
+2026-05-15 21:34:55,065 Wrote /home/anward/project/graphtm-cbr/results/train_full_ames_1778880895.json
+2026-05-15 21:34:55,071 Wrote /home/anward/project/graphtm-cbr/results/hgtm_ames_final.npy (shape=(2000, 60, 8))

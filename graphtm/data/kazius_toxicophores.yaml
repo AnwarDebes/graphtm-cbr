@@ -1,0 +1,205 @@
+# Kazius 2005 Toxicophores — Ames-mutagenicity structural alerts.
+#
+# Source: Kazius J., McGuire R., Bursi R. (2005), "Derivation and Validation
+# of Toxicophores for Mutagenicity Prediction." Journal of Medicinal Chemistry,
+# 48(1), 312-320, DOI: 10.1021/jm040835a. Table 1 of the paper enumerates the
+# 29 substructural alerts ("toxicophores") refined from earlier Bursi/Ashby
+# alert lists by retraining on a 4,337-compound mutagenicity panel.
+#
+# SMARTS notes
+# ------------
+# (1) The published table mixes natural-language descriptions with explicit
+#     substructure diagrams. Several alerts are not single SMARTS patterns but
+#     conjunctions of geometric and electronic conditions; for those we encode
+#     the most common SMARTS form used by the open-source ToxAlerts /
+#     RDKit-FilterCatalog community, with the source attributed in `notes`.
+# (2) All SMARTS in this file are RDKit-parsable. The Kazius IDs below are
+#     1-indexed and match the table order in J Med Chem 48:312 (2005).
+# (3) The eight alerts marked `tier: core` correspond to the
+#     "always-representable" subset used in the prior axiom-coi unified
+#     project for recourse held-out evaluation. These are guaranteed to have
+#     unambiguous SMARTS and to round-trip through `encode_graph` after edits.
+#
+# Schema
+# ------
+# toxicophores:
+#   - kazius_id:   int (1..29)
+#     name:        short string used as recourse alert label
+#     smarts:      RDKit-parsable SMARTS pattern
+#     tier:        "core" | "extended"
+#     notes:       optional commentary / citation pointer
+
+toxicophores:
+  - kazius_id: 1
+    name: aromatic_nitro
+    smarts: "[a]-[N+](=O)[O-]"
+    tier: core
+    notes: "Aromatic nitro at any aromatic carbon. Most populous Kazius alert."
+
+  - kazius_id: 2
+    name: aromatic_amine
+    smarts: "[NX3;H2,H1;!$(NC=O);!$(N=*)]-[a]"
+    tier: core
+    notes: "Primary/secondary aromatic amine, non-acylated."
+
+  - kazius_id: 3
+    name: aromatic_nitroso
+    smarts: "[a]-[NX2]=O"
+    tier: extended
+    notes: "Aromatic nitroso. Direct-acting electrophile."
+
+  - kazius_id: 4
+    name: alkyl_nitro
+    smarts: "[CX4;H1,H2,H3]-[N+](=O)[O-]"
+    tier: extended
+    notes: "Alkyl nitro (excludes aromatic and tertiary cases)."
+
+  - kazius_id: 5
+    name: aromatic_azo
+    smarts: "[a]-N=N-[a]"
+    tier: extended
+    notes: "Aromatic azo bridge; reductive cleavage forms aryl amine."
+
+  - kazius_id: 6
+    name: aromatic_azoxy
+    smarts: "[a]-N=[N+]([O-])-[a]"
+    tier: extended
+    notes: "Aromatic azoxy. Direct- and indirect-acting genotoxin."
+
+  - kazius_id: 7
+    name: nitrosamine
+    smarts: "[NX3;!H0,$(NC)]N=O"
+    tier: extended
+    notes: "N-nitrosamine; ICH M7 cohort-of-concern (NDMA, NDEA)."
+
+  - kazius_id: 8
+    name: triazene
+    smarts: "[NX3;H1,H2]N=N"
+    tier: extended
+    notes: "Triazene; alkylating after diazonium release."
+
+  - kazius_id: 9
+    name: aliphatic_halide
+    smarts: "[CX4;H1,H2,H3][F,Cl,Br,I]"
+    tier: extended
+    notes: "Primary/secondary alkyl halide (SN2 alkylator)."
+
+  - kazius_id: 10
+    name: alpha_halo_thio
+    smarts: "[CX4;H1,H2]([F,Cl,Br,I])[S]"
+    tier: extended
+    notes: "Alpha-halothioether; reactive sulfur mustard motif."
+
+  - kazius_id: 11
+    name: halogenated_aromatic
+    smarts: "[a]([F,Cl,Br,I])[a][a]([F,Cl,Br,I])"
+    tier: core
+    notes: "Two ring halogens on adjacent or 1,3-related aromatic atoms."
+
+  - kazius_id: 12
+    name: halogen_rich
+    smarts: "[#6]([F,Cl,Br,I])([F,Cl,Br,I])[F,Cl,Br,I]"
+    tier: core
+    notes: "Carbon bearing >=3 halogens (CX3 motif)."
+
+  - kazius_id: 13
+    name: polycyclic_aromatic
+    smarts: "c1ccc2ccc3ccccc3c2c1"
+    tier: core
+    notes: "Phenanthrene-like fused tri-aromatic (PAH surrogate)."
+
+  - kazius_id: 14
+    name: epoxide
+    smarts: "C1OC1"
+    tier: extended
+    notes: "Three-membered oxirane (epoxide)."
+
+  - kazius_id: 15
+    name: aziridine
+    smarts: "C1NC1"
+    tier: extended
+    notes: "Three-membered N-heterocycle."
+
+  - kazius_id: 16
+    name: azide
+    smarts: "[N-]=[N+]=N"
+    tier: extended
+    notes: "Organic azide; alkyl-azide more genotoxic than aryl-azide."
+
+  - kazius_id: 17
+    name: diazo
+    smarts: "[C]=[N+]=[N-]"
+    tier: extended
+    notes: "Aliphatic diazo (alkylating intermediate)."
+
+  - kazius_id: 18
+    name: aliphatic_aldehyde
+    smarts: "[CX3H1](=O)[#6;X4]"
+    tier: extended
+    notes: "Aliphatic aldehyde; protein/DNA crosslinker."
+
+  - kazius_id: 19
+    name: alpha_beta_unsat_carbonyl
+    smarts: "[CX3]=[CX3][CX3](=O)[#6,#1]"
+    tier: core
+    notes: "Michael acceptor: alpha,beta-unsaturated carbonyl."
+
+  - kazius_id: 20
+    name: nitro_aromatic_ring_fused
+    smarts: "[a]1[a][a]([N+](=O)[O-])[a][a][a]1[a]2[a][a][a][a][a]2"
+    tier: extended
+    notes: "Nitro group on a fused-ring aromatic; potent in Salmonella."
+
+  - kazius_id: 21
+    name: hydrazine
+    smarts: "[NX3;H1,H2][NX3;H1,H2]"
+    tier: extended
+    notes: "Aliphatic / aromatic hydrazine."
+
+  - kazius_id: 22
+    name: isocyanate
+    smarts: "[NX2]=C=O"
+    tier: extended
+    notes: "Isocyanate / isothiocyanate analogue."
+
+  - kazius_id: 23
+    name: sulfonate_ester
+    smarts: "[CX4][OX2][SX4](=O)(=O)[CX4,c]"
+    tier: extended
+    notes: "Alkyl sulfonate ester; classic alkylator (e.g. methyl mesylate)."
+
+  - kazius_id: 24
+    name: phosphonate_ester
+    smarts: "[#6][OX2]P(=O)([OX2][#6])[OX2][#6]"
+    tier: extended
+    notes: "Tri-substituted phosphate ester; some organophosphate genotoxins."
+
+  - kazius_id: 25
+    name: hydroxylamine
+    smarts: "[NX3;H1,H2][OX2H1]"
+    tier: extended
+    notes: "N-hydroxylamine / N-OH precursor of nitrenium."
+
+  - kazius_id: 26
+    name: carbamate
+    smarts: "[NX3;H1,H2][CX3](=O)[OX2][CX4]"
+    tier: extended
+    notes: "Aliphatic carbamate; some genotoxins (ethyl carbamate, urethane)."
+
+  - kazius_id: 27
+    name: pure_hydrocarbon
+    smarts: "[#6;a,A][#6;a,A][#6;a,A][#6;a,A][#6;a,A][#6;a,A]"
+    tier: core
+    notes: "Hex-carbon chain/ring — Kazius non-mutagenic control surrogate."
+
+  - kazius_id: 28
+    name: large_hydrophobic_w_heteroatom
+    smarts: "[#6][#6][#6][#6][#6][#6][#6][N,O,S]"
+    tier: core
+    notes: "Long aliphatic chain (>=7 C) with terminal heteroatom."
+
+  - kazius_id: 29
+    name: bay_region_PAH
+    smarts: "c1cc2ccc3cccc4ccc(c1)c2c34"
+    tier: extended
+    notes: "Bay-region PAH motif; epoxide bioactivation pathway."

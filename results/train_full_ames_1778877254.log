@@ -1,0 +1,17 @@
+2026-05-15 20:34:14,159 Loading TDC AMES (Hansen 2009)...
+2026-05-15 20:34:14,282 Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-05-15 20:34:14,282 Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-05-15 20:34:14,282 NumExpr defaulting to 8 threads.
+2026-05-15 20:34:18,279 n_mols=7278 y_pos=0.546 splits tr=5822 va=727 te=729
+2026-05-15 20:34:18,279 Encoding (BSC D=512 k_hop=2 max_nodes=60)...
+2026-05-15 20:34:33,814 encoded=7278 dropped_big=0 dropped_failed=0 (15.5s)
+2026-05-15 20:34:33,818 After encoding: tr=5822 va=727 te=729
+2026-05-15 20:34:33,818 Morgan-FP + RF baseline...
+2026-05-15 20:34:35,599 Morgan-RF baseline: acc=0.720 auroc=0.790 (1.3s)
+2026-05-15 20:34:35,601 HGTM spec: C=2000 T=500 s=3.90 FEATURES=128 literals/clause=7680 D_bits=512
+2026-05-15 20:34:35,605 Training HGTM: tr=5822 va=727 epochs=30
+2026-05-15 20:35:42,283 epoch= 1 valid_acc=0.470 valid_auroc=0.500 wall=60.8s
+2026-05-15 20:36:48,064 epoch= 2 valid_acc=0.470 valid_auroc=0.500 wall=59.9s
+2026-05-15 20:37:53,894 epoch= 3 valid_acc=0.470 valid_auroc=0.500 wall=60.1s
+2026-05-15 20:38:58,427 epoch= 4 valid_acc=0.470 valid_auroc=0.500 wall=58.7s
+2026-05-15 20:40:03,513 epoch= 5 valid_acc=0.530 valid_auroc=0.500 wall=59.1s

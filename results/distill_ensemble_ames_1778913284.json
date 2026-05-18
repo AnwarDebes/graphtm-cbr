@@ -1,0 +1,72 @@
+{
+  "config": {
+    "K": 5,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "epochs": 60,
+    "n_clauses": 2000,
+    "T": 500,
+    "s": 3.9,
+    "D_bits": 512,
+    "max_nodes": 60
+  },
+  "gin_teacher": {
+    "test_acc": 0.7297668038408779,
+    "test_auroc": 0.7963529625096333,
+    "val_auroc": 0.8849570703578002
+  },
+  "members": [
+    {
+      "seed": 42,
+      "best_epoch": 5,
+      "best_valid_auroc": 0.6855927698032961,
+      "test_acc": 0.578875171467764,
+      "test_auroc": 0.678944346223008,
+      "wall_min": 49.15249511798223
+    },
+    {
+      "seed": 43,
+      "best_epoch": 7,
+      "best_valid_auroc": 0.6880458722563986,
+      "test_acc": 0.5967078189300411,
+      "test_auroc": 0.6808067757680161,
+      "wall_min": 48.85027828613917
+    },
+    {
+      "seed": 44,
+      "best_epoch": 47,
+      "best_valid_auroc": 0.6684058631427052,
+      "test_acc": 0.6282578875171467,
+      "test_auroc": 0.6660584493101833,
+      "wall_min": 50.296282645066576
+    },
+    {
+      "seed": 45,
+      "best_epoch": 4,
+      "best_valid_auroc": 0.6832042226779069,
+      "test_acc": 0.5843621399176955,
+      "test_auroc": 0.669941973797543,
+      "wall_min": 49.23975268205007
+    },
+    {
+      "seed": 46,
+      "best_epoch": 16,
+      "best_valid_auroc": 0.6734259892154629,
+      "test_acc": 0.6419753086419753,
+      "test_auroc": 0.6682910981156596,
+      "wall_min": 50.75277144908905
+    }
+  ],
+  "ensemble_soft_sum": {
+    "test_acc": 0.635116598079561,
+    "test_auroc": 0.6848640766429425
+  },
+  "n_train": 5822,
+  "n_valid": 727,
+  "n_test": 729
+}

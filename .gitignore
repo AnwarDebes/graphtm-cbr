@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+build/
+dist/
+
+# Test / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environments
+.env
+.venv/
+venv/
+
+# Local model checkpoints (large)
+*.pt
+*.pth
+*.bin
+
+# Compiled CUDA artefacts
+*.so
+*.cubin
+*.ptx
+*.fatbin
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+
+# Project-specific
+.graphtm_cache/         # in-repo dataset cache when HOME is unwritable
+paper/_build/           # sphinx / latex build artefacts

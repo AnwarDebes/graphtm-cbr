@@ -1,0 +1,6 @@
+2026-05-15 21:39:32,434 Loading AMES + encoding...
+2026-05-15 21:39:32,559 Note: detected 96 virtual cores but NumExpr set to maximum of 64, check "NUMEXPR_MAX_THREADS" environment variable.
+2026-05-15 21:39:32,559 Note: NumExpr detected 96 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2026-05-15 21:39:32,559 NumExpr defaulting to 8 threads.
+2026-05-15 21:39:38,071 test encoded=729
+2026-05-15 21:39:38,072 Restoring HGTM from disk...
