@@ -12,7 +12,7 @@ Regulators (ICH M7(R2) §6.1, EU REACH OECD Principle 5, EU AI Act Art. 13) requ
 
 I present **graphtm-cbr**, the first **graph-walking Hierarchical Tsetlin Machine** combined with **clause-driven counterfactual Boolean recourse** over chemically-actionable graph edits. Unlike prior Tsetlin Machine variants that summarise molecules to aggregate atom/bond counts (Blakely 2025 SGI-TM on MUTAG fingerprint), my student evaluates AND-OR-AND-OR-AND clauses *at every node* and OR-aggregates votes *across nodes*, with edge information bound into the clause via VSA hyperdimensional binding (atom(u) XOR bond(b) XOR atom(v)). Training is performed by custom CUDA-C kernels (PyCUDA `SourceModule`), with bit-plane TA storage (uint32, 32-way packed) and persistent kernels for online training.
 
-On TDC AMES mutagenicity (Hansen 2009 + Kazius 2005, n=7278 SMILES, scaffold split): a K=5 GIN-distilled HGTM ensemble reaches test AUROC **0.685** and accuracy **0.635** vs a Morgan-FP RF baseline of 0.790 AUROC and a GIN teacher of 0.796 AUROC. The same ensemble produces a chemistry-valid ≤3-edit counterfactual for **191 / 200 (95.5 %)** of predicted-positive test molecules at mean **1.30 flips/molecule** and 2.1 s p50 GPU latency. The same recipe without distillation lifts only 0.669 AUROC and 54.5 % recourse success. Distillation barely lifts raw AUROC but transforms the recourse layer (+41 pp success). All 21 Kazius toxicophores present in the test set are covered by at least one learned clause (with the honest caveat that saturated clauses limit per-clause precision; §5.3).
+On TDC AMES mutagenicity (Hansen 2009 + Kazius 2005, n=7278 SMILES, scaffold split): a K=5 GIN-distilled HGTM ensemble reaches test AUROC **0.685** and accuracy **0.635** vs a Morgan-FP RF baseline of 0.790 AUROC and a GIN teacher of 0.796 AUROC. The same ensemble produces a chemistry-valid ≤3-edit counterfactual for **191 / 200 (95.5 %)** of predicted-positive test molecules at mean **1.30 flips/molecule** and 2.1 s p50 GPU latency. The same recipe without distillation lifts only 0.669 AUROC and 54.5 % recourse success. Distillation barely lifts raw AUROC but transforms the recourse layer (+41 pp success). All 21 Kazius toxicophores present in the test set are covered by at least one learned clause (with the caveat that saturated clauses limit per-clause precision; §5.3).
 
 The combination of (i) the canonical Hierarchical Tsetlin Machine clauses (Granmo & Saha, faithful C-reference parity port), (ii) per-node + OR-across-nodes graph-walking forward pass with VSA edge binding, and (iii) Boolean clause-driven graph-edit counterfactual recourse over named med-chem-actionable operations is, to my knowledge and the literature scans I report (`research/01`, `research/04`, `research/06`), unoccupied. Code and reproducible scripts at this repository; **165 unit + integration tests pass**.
 
@@ -41,7 +41,7 @@ The **intersection**, (graph-walking HGTM) × (counterfactual graph-edit recours
 2. **Custom CUDA-C kernels** (§3.2). Six `__global__` kernels via PyCUDA `SourceModule` (`clause_forward_pernode`, `clause_or_across_nodes`, `class_sum_reduce`, `select_clause_node`, `clause_feedback`, `init_ta_state`). Bit-plane TA storage (uint32, 32-way packed); compile-time `#define`s for tree shape; persistent kernels for online training. Cair-style XOR ripple-carry for 32-way parallel state updates.
 3. **Clause-driven counterfactual graph-edit recourse** (§3.3). For each firing clause I walk its AND-OR-AND-OR-AND tree, identify active literals, map them back to (atom, bond) substructures via VSA codebook cleanup, and emit candidate `GraphEdit`s. Greedy minimum-edit search bounded by `max_flips=3`; chemistry validity via RDKit sanitize + Lipinski Ro5 + SAscore (Ertl 2009).
 4. **Regulator-aligned benchmark**. TDC AMES (Hansen 2009 + Kazius 2005, n=7278, scaffold split) chosen because (a) ICH M7(R2) §6.1 explicitly mandates expert-rule + statistical dual system, (b) Kazius 2005 reduces Ames to 29 substructural toxicophore SMARTS, so interpretability ground truth exists, (c) topology gap vs Morgan-FP RF is verified > 0.05 AUROC (research/05).
-5. **Honest scope statement** (§5). I do NOT claim raw-accuracy supremacy over deep GNNs. I claim that no prior method combines a global graph-walking rule set with regulator-aligned recourse over chemistry-named edits.
+5. **Scope statement** (§5). I do NOT claim raw-accuracy supremacy over deep GNNs. I claim that no prior method combines a global graph-walking rule set with regulator-aligned recourse over chemistry-named edits.
 
 ---
 
@@ -181,7 +181,7 @@ Methodology: rather than VSA-invert each leaf literal back to a (atom, bond, ato
 
 Covered alerts include: aromatic_nitro, aromatic_amine, aromatic_azo, epoxide, hydrazine, nitrosamine, nitro_aromatic_ring_fused, halogenated_aromatic, halogen_rich, aziridine, alpha_beta_unsat_carbonyl (Michael acceptor), bay_region_PAH, polycyclic_aromatic, aliphatic_aldehyde, aliphatic_halide, azide, carbamate, phosphonate_ester, sulfonate_ester, large_hydrophobic_w_heteroatom, pure_hydrocarbon.
 
-**Honest caveat.** The top "covering" clauses fire on 593-728 of 729 test molecules, i.e. they fire nearly universally. So coverage is high partly because saturated clauses are guaranteed to co-fire with any alert that has positive support. The *recall* is 100 % but the *precision* of any single clause as a toxicophore detector is closer to the alert's prevalence in the test set. The distilled ensemble does NOT meaningfully reduce saturation (§4.5, top clauses still fire on 636-729 / 729). Tightening this is the most important architectural follow-up; see §5.3.
+**Caveat.** The top "covering" clauses fire on 593-728 of 729 test molecules, i.e. they fire nearly universally. So coverage is high partly because saturated clauses are guaranteed to co-fire with any alert that has positive support. The *recall* is 100 % but the *precision* of any single clause as a toxicophore detector is closer to the alert's prevalence in the test set. The distilled ensemble does NOT meaningfully reduce saturation (§4.5, top clauses still fire on 636-729 / 729). Tightening this is the most important architectural follow-up; see §5.3.
 
 ![Kazius alert coverage](figures/fig_kazius_coverage.pdf)
 
@@ -235,7 +235,7 @@ Three TDC AMES test-set molecules, all predicted MUTAGENIC, all flipped to SAFE 
 
 For each case, the firing-clause union over the 5 ensemble members is large (1407-1894 clauses out of 2000): *almost every clause votes mutagenic for these molecules*, which is consistent with the §4.4 saturation finding. Yet the greedy recourse still identifies a single bond whose removal flips the ensemble's verdict. The chemistry interpretation per case is in `paper/case_studies.md`.
 
-### 4.8 Honest negatives and the ensembling story
+### 4.8 Negative results and the ensembling story
 
 - **Single-seed AUROC is below baseline.** On seed 42 the final-epoch test AUROC is 0.544, far short of Morgan-FP RF at 0.790. The graph-walking HGTM does NOT beat fingerprint-RF in raw accuracy on this single-seed run.
 - **TM training is bimodal.** Validation AUROC swings between 0.53 and 0.69 across 60 epochs. This is intrinsic to stochastic-feedback Tsetlin Machines (see Granmo et al. 2025 and my prior axiom-coi-unified) and matches the canonical Granmo C reference behaviour.
@@ -244,7 +244,7 @@ For each case, the firing-clause union over the 5 ensemble members is large (140
 
 ---
 
-## 5. Discussion and Honest Scope
+## 5. Discussion and Scope
 
 ### 5.1 What I claim
 - The **combination** of (canonical Hierarchical TM clauses) × (graph-walking per-node forward with VSA edge binding) × (clause-driven graph-edit counterfactual recourse) is novel, an empty intersection in 2026 literature.
