@@ -108,7 +108,7 @@ Five invariants are enforced by `tests/test_integration/test_invariants.py`:
 | Latency p50 / p95 / p99 (ms) | 3692 / 8522 / 12687 | **2126 / 6775 / 9254** |
 | Kazius coverage (alerts present 21/29) | 21/21 (saturated clauses) | 21/21 (saturated clauses) |
 
-**Headline:** raw AUROC trails the fingerprint baseline by 0.10, but **19 of every 20 predicted-positive molecules receive a working <=3-edit counterfactual**, the regulator-load-bearing metric under ICH M7(R2) §7.5. See `paper/paper.md` for full discussion and honest scope.
+**Headline:** raw AUROC trails the fingerprint baseline by 0.10, but **19 of every 20 predicted-positive molecules receive a working <=3-edit counterfactual**, the regulator-load-bearing metric under ICH M7(R2) §7.5. See `paper/paper.md` for the full discussion and scope.
 
 ## Regulatory framing
 
